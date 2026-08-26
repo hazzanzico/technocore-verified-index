@@ -49,6 +49,7 @@ test("escapes HTML and Markdown metacharacters", () => {
 test("renders an evidence-first README without interpreting descriptions", () => {
   const output = renderReadme(report);
   assert.match(output, /Evidence over hype|What makes this different|owner\/project/);
+  assert.match(output, /https:\/\/hazzanzico\.github\.io\/technocore-verified-index\//);
   assert.match(output, /Useful &lt;script&gt;alert\(1\)&lt;\/script&gt; project \\| safely rendered/);
   assert.doesNotMatch(output, /<script>alert/);
 });

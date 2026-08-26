@@ -101,8 +101,8 @@ Projects are ordered by repository name, not score.
 ${rows}
 
 Read the [detailed report](reports/latest.md), download the
-[machine-readable snapshot](reports/latest.json), or open the generated site in
-<code>site/index.html</code>.
+[machine-readable snapshot](reports/latest.json), or browse the
+[live searchable index](https://hazzanzico.github.io/technocore-verified-index/).
 
 ## Reading the score
 
