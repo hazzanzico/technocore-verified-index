@@ -1,0 +1,21 @@
+{
+  "name": "technocore-verified-index",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evidence-first, automatically refreshed index of Technocore community projects",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-lines=95 --test-coverage-branches=85 --test-coverage-functions=100",
+    "check": "node --check src/catalog.mjs && node --check src/github.mjs && node --check src/indexer.mjs && node --check src/render.mjs && node --check src/score.mjs && node --check scripts/archive.mjs && node --check scripts/outputs.mjs && node --check scripts/paths.mjs && node --check scripts/refresh.mjs && node --check scripts/render.mjs && node --check scripts/validate.mjs",
+    "validate": "node scripts/validate.mjs",
+    "render": "node scripts/render.mjs",
+    "refresh": "node scripts/refresh.mjs",
+    "archive": "node scripts/archive.mjs",
+    "ci": "npm run test:coverage && npm run check && npm run validate && npm run render && git diff --exit-code -- README.md reports/latest.json reports/latest.md site/index.html"
+  },
+  "license": "MIT"
+}

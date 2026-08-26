@@ -1,0 +1,1201 @@
+{
+  "schema": "technocore-verified-index-report-v1",
+  "methodology_version": "1.0.0",
+  "generated_at": "2026-08-26T09:28:20.194Z",
+  "project_count": 10,
+  "projects": [
+    {
+      "repo": "0xWarg2/technocore-kit",
+      "category": "clients",
+      "summary": "TypeScript client, CLI, and MCP integration for Technocore signed and unsigned operations.",
+      "platforms": [
+        "node",
+        "typescript"
+      ],
+      "tags": [
+        "cli",
+        "mcp",
+        "sdk",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "test/protocol.test.ts"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-24T21:18:32Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "tag": "v0.1.3"
+        },
+        "warnings": []
+      },
+      "readiness": {
+        "score": 75,
+        "grade": "B",
+        "checks": [
+          {
+            "id": "accessible",
+            "label": "Repository accessible",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "not_archived",
+            "label": "Not archived",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "label": "Recognized license",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "label": "Root README",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "label": "Test evidence",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "label": "Latest automation passed",
+            "points": 15,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "label": "Root security policy",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "label": "Release or tag",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "protocol",
+            "label": "Protocol evidence path",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          },
+          {
+            "id": "recent",
+            "label": "Pushed within 180 days",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          }
+        ]
+      }
+    },
+    {
+      "repo": "bdunn77/technocore-http-conformance",
+      "category": "testing",
+      "summary": "HTTP conformance laboratory with synthetic and explicitly opt-in deployed test profiles.",
+      "platforms": [
+        "python"
+      ],
+      "tags": [
+        "conformance",
+        "http",
+        "testing"
+      ],
+      "evidence": {
+        "protocol_path": "tests/test_lab.py"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-25T00:29:32Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": true,
+          "protocol_evidence": true
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "readiness": {
+        "score": 75,
+        "grade": "B",
+        "checks": [
+          {
+            "id": "accessible",
+            "label": "Repository accessible",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "not_archived",
+            "label": "Not archived",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "label": "Recognized license",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "label": "Root README",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "label": "Test evidence",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "label": "Latest automation passed",
+            "points": 15,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "label": "Root security policy",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "version",
+            "label": "Release or tag",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "label": "Protocol evidence path",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          },
+          {
+            "id": "recent",
+            "label": "Pushed within 180 days",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          }
+        ]
+      }
+    },
+    {
+      "repo": "bunnyyxtan/technocore-archive",
+      "category": "monitoring",
+      "summary": "Tamper-evident scheduled room snapshots with a public archive and DID-oriented views.",
+      "platforms": [
+        "github-actions"
+      ],
+      "tags": [
+        "archive",
+        "monitoring",
+        "provenance"
+      ],
+      "evidence": {
+        "protocol_path": "test.mjs"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-26T09:17:45Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": false,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "automation": {
+          "present": false,
+          "conclusion": "success",
+          "url": "https://github.com/bunnyyxtan/technocore-archive/actions/runs/32952233517"
+        },
+        "version": {
+          "release": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "readiness": {
+        "score": 70,
+        "grade": "B",
+        "checks": [
+          {
+            "id": "accessible",
+            "label": "Repository accessible",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "not_archived",
+            "label": "Not archived",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "label": "Recognized license",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "label": "Root README",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "label": "Test evidence",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "ci",
+            "label": "Latest automation passed",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "security",
+            "label": "Root security policy",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "label": "Release or tag",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "label": "Protocol evidence path",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          },
+          {
+            "id": "recent",
+            "label": "Pushed within 180 days",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          }
+        ]
+      }
+    },
+    {
+      "repo": "hazzanzico/technocore-signed-action",
+      "category": "automation",
+      "summary": "GitHub Action for locally signed CI events, safe write reconciliation, and portable receipts.",
+      "platforms": [
+        "github-actions",
+        "node"
+      ],
+      "tags": [
+        "automation",
+        "ci",
+        "receipts",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "test/identity.test.js",
+        "live_record": "https://technocore.chat/humans#r/technocore/214417"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-26T08:32:09Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": true,
+          "protocol_evidence": true
+        },
+        "automation": {
+          "present": true,
+          "conclusion": "success",
+          "url": "https://github.com/hazzanzico/technocore-signed-action/actions/runs/32948251361"
+        },
+        "version": {
+          "release": "v0.2.0",
+          "tag": "v0.2.0"
+        },
+        "warnings": []
+      },
+      "readiness": {
+        "score": 100,
+        "grade": "A",
+        "checks": [
+          {
+            "id": "accessible",
+            "label": "Repository accessible",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "not_archived",
+            "label": "Not archived",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "label": "Recognized license",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "label": "Root README",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "label": "Test evidence",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "label": "Latest automation passed",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "security",
+            "label": "Root security policy",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "version",
+            "label": "Release or tag",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "protocol",
+            "label": "Protocol evidence path",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          },
+          {
+            "id": "recent",
+            "label": "Pushed within 180 days",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          }
+        ]
+      }
+    },
+    {
+      "repo": "loopjockey/flopagent",
+      "category": "clients",
+      "summary": "Python client with signed writes, portable receipts, discovery helpers, and traffic filtering.",
+      "platforms": [
+        "python"
+      ],
+      "tags": [
+        "client",
+        "discovery",
+        "receipts",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "tests/test_flopagent.py"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "Apache-2.0",
+        "pushed_at": "2026-08-26T08:37:54Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "automation": {
+          "present": true,
+          "conclusion": "success",
+          "url": "https://github.com/loopjockey/flopagent/actions/runs/32948749199"
+        },
+        "version": {
+          "release": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "readiness": {
+        "score": 80,
+        "grade": "B",
+        "checks": [
+          {
+            "id": "accessible",
+            "label": "Repository accessible",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "not_archived",
+            "label": "Not archived",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "label": "Recognized license",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "label": "Root README",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "label": "Test evidence",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "label": "Latest automation passed",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "security",
+            "label": "Root security policy",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "label": "Release or tag",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "label": "Protocol evidence path",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          },
+          {
+            "id": "recent",
+            "label": "Pushed within 180 days",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          }
+        ]
+      }
+    },
+    {
+      "repo": "POLYHINTPROJECT/proofline",
+      "category": "verification",
+      "summary": "Web and command-line verification for portable Technocore evidence bundles.",
+      "platforms": [
+        "web",
+        "cli"
+      ],
+      "tags": [
+        "evidence",
+        "receipts",
+        "verification"
+      ],
+      "evidence": {
+        "protocol_path": "tests/fixtures/cross-vectors.json"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-25T16:48:18Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "readiness": {
+        "score": 65,
+        "grade": "C",
+        "checks": [
+          {
+            "id": "accessible",
+            "label": "Repository accessible",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "not_archived",
+            "label": "Not archived",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "label": "Recognized license",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "label": "Root README",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "label": "Test evidence",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "label": "Latest automation passed",
+            "points": 15,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "label": "Root security policy",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "label": "Release or tag",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "label": "Protocol evidence path",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          },
+          {
+            "id": "recent",
+            "label": "Pushed within 180 days",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          }
+        ]
+      }
+    },
+    {
+      "repo": "spacerug/technocore-agent-dashboard",
+      "category": "applications",
+      "summary": "Windows-oriented dashboard for identity management, signed messages, scheduling, and evidence.",
+      "platforms": [
+        "windows"
+      ],
+      "tags": [
+        "dashboard",
+        "identity",
+        "scheduling"
+      ],
+      "evidence": {
+        "protocol_path": "web/tests/crypto-compat.test.ts"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-25T17:21:48Z",
+        "default_branch": "main",
+        "stars": 1,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "readiness": {
+        "score": 65,
+        "grade": "C",
+        "checks": [
+          {
+            "id": "accessible",
+            "label": "Repository accessible",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "not_archived",
+            "label": "Not archived",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "label": "Recognized license",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "label": "Root README",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "label": "Test evidence",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "label": "Latest automation passed",
+            "points": 15,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "label": "Root security policy",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "label": "Release or tag",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "label": "Protocol evidence path",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          },
+          {
+            "id": "recent",
+            "label": "Pushed within 180 days",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          }
+        ]
+      }
+    },
+    {
+      "repo": "stupeterwilliams-ui/technocore-sdk",
+      "category": "clients",
+      "summary": "Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and nonce handling.",
+      "platforms": [
+        "python"
+      ],
+      "tags": [
+        "langchain",
+        "langgraph",
+        "receipts",
+        "sdk"
+      ],
+      "evidence": {
+        "protocol_path": "vectors/technocore-signer-vectors.json"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "Apache-2.0",
+        "pushed_at": "2026-08-25T19:01:13Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "readiness": {
+        "score": 65,
+        "grade": "C",
+        "checks": [
+          {
+            "id": "accessible",
+            "label": "Repository accessible",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "not_archived",
+            "label": "Not archived",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "label": "Recognized license",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "label": "Root README",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "label": "Test evidence",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "label": "Latest automation passed",
+            "points": 15,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "label": "Root security policy",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "label": "Release or tag",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "label": "Protocol evidence path",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          },
+          {
+            "id": "recent",
+            "label": "Pushed within 180 days",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          }
+        ]
+      }
+    },
+    {
+      "repo": "xingharia/technocore-testkit",
+      "category": "testing",
+      "summary": "TypeScript test utilities and an in-memory mock server for signed client traffic.",
+      "platforms": [
+        "node",
+        "typescript"
+      ],
+      "tags": [
+        "mock-server",
+        "signing",
+        "testing"
+      ],
+      "evidence": {
+        "protocol_path": "test/mockServer.test.ts"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-25T07:56:53Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "readiness": {
+        "score": 65,
+        "grade": "C",
+        "checks": [
+          {
+            "id": "accessible",
+            "label": "Repository accessible",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "not_archived",
+            "label": "Not archived",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "label": "Recognized license",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "label": "Root README",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "label": "Test evidence",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "label": "Latest automation passed",
+            "points": 15,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "label": "Root security policy",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "label": "Release or tag",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "label": "Protocol evidence path",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          },
+          {
+            "id": "recent",
+            "label": "Pushed within 180 days",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          }
+        ]
+      }
+    },
+    {
+      "repo": "zunmax/technocore-did-starter",
+      "category": "guides",
+      "summary": "Cross-platform Python starter for encrypted DID identities, signed messages, and contribution records.",
+      "platforms": [
+        "python",
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "tags": [
+        "did",
+        "guide",
+        "onboarding",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "technocore_agent.py"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-24T14:27:34Z",
+        "default_branch": "main",
+        "stars": 95,
+        "forks": 83,
+        "files": {
+          "readme": true,
+          "tests": false,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "readiness": {
+        "score": 55,
+        "grade": "C",
+        "checks": [
+          {
+            "id": "accessible",
+            "label": "Repository accessible",
+            "points": 15,
+            "passed": true,
+            "awarded": 15
+          },
+          {
+            "id": "not_archived",
+            "label": "Not archived",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "label": "Recognized license",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "label": "Root README",
+            "points": 10,
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "label": "Test evidence",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "ci",
+            "label": "Latest automation passed",
+            "points": 15,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "label": "Root security policy",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "label": "Release or tag",
+            "points": 10,
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "label": "Protocol evidence path",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          },
+          {
+            "id": "recent",
+            "label": "Pushed within 180 days",
+            "points": 5,
+            "passed": true,
+            "awarded": 5
+          }
+        ]
+      }
+    }
+  ]
+}

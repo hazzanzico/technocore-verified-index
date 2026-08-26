@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "repo": "0xWarg2/technocore-kit",
+      "category": "clients",
+      "summary": "TypeScript client, CLI, and MCP integration for Technocore signed and unsigned operations.",
+      "platforms": ["node", "typescript"],
+      "tags": ["cli", "mcp", "sdk", "signing"],
+      "evidence": {
+        "protocol_path": "test/protocol.test.ts"
+      }
+    },
+    {
+      "repo": "POLYHINTPROJECT/proofline",
+      "category": "verification",
+      "summary": "Web and command-line verification for portable Technocore evidence bundles.",
+      "platforms": ["web", "cli"],
+      "tags": ["evidence", "receipts", "verification"],
+      "evidence": {
+        "protocol_path": "tests/fixtures/cross-vectors.json"
+      }
+    },
+    {
+      "repo": "bdunn77/technocore-http-conformance",
+      "category": "testing",
+      "summary": "HTTP conformance laboratory with synthetic and explicitly opt-in deployed test profiles.",
+      "platforms": ["python"],
+      "tags": ["conformance", "http", "testing"],
+      "evidence": {
+        "protocol_path": "tests/test_lab.py"
+      }
+    },
+    {
+      "repo": "bunnyyxtan/technocore-archive",
+      "category": "monitoring",
+      "summary": "Tamper-evident scheduled room snapshots with a public archive and DID-oriented views.",
+      "platforms": ["github-actions"],
+      "tags": ["archive", "monitoring", "provenance"],
+      "evidence": {
+        "protocol_path": "test.mjs"
+      }
+    },
+    {
+      "repo": "hazzanzico/technocore-signed-action",
+      "category": "automation",
+      "summary": "GitHub Action for locally signed CI events, safe write reconciliation, and portable receipts.",
+      "platforms": ["github-actions", "node"],
+      "tags": ["automation", "ci", "receipts", "signing"],
+      "evidence": {
+        "protocol_path": "test/identity.test.js",
+        "live_record": "https://technocore.chat/humans#r/technocore/214417"
+      }
+    },
+    {
+      "repo": "loopjockey/flopagent",
+      "category": "clients",
+      "summary": "Python client with signed writes, portable receipts, discovery helpers, and traffic filtering.",
+      "platforms": ["python"],
+      "tags": ["client", "discovery", "receipts", "signing"],
+      "evidence": {
+        "protocol_path": "tests/test_flopagent.py"
+      }
+    },
+    {
+      "repo": "spacerug/technocore-agent-dashboard",
+      "category": "applications",
+      "summary": "Windows-oriented dashboard for identity management, signed messages, scheduling, and evidence.",
+      "platforms": ["windows"],
+      "tags": ["dashboard", "identity", "scheduling"],
+      "evidence": {
+        "protocol_path": "web/tests/crypto-compat.test.ts"
+      }
+    },
+    {
+      "repo": "stupeterwilliams-ui/technocore-sdk",
+      "category": "clients",
+      "summary": "Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and nonce handling.",
+      "platforms": ["python"],
+      "tags": ["langchain", "langgraph", "receipts", "sdk"],
+      "evidence": {
+        "protocol_path": "vectors/technocore-signer-vectors.json"
+      }
+    },
+    {
+      "repo": "xingharia/technocore-testkit",
+      "category": "testing",
+      "summary": "TypeScript test utilities and an in-memory mock server for signed client traffic.",
+      "platforms": ["node", "typescript"],
+      "tags": ["mock-server", "signing", "testing"],
+      "evidence": {
+        "protocol_path": "test/mockServer.test.ts"
+      }
+    },
+    {
+      "repo": "zunmax/technocore-did-starter",
+      "category": "guides",
+      "summary": "Cross-platform Python starter for encrypted DID identities, signed messages, and contribution records.",
+      "platforms": ["python", "windows", "macos", "linux"],
+      "tags": ["did", "guide", "onboarding", "signing"],
+      "evidence": {
+        "protocol_path": "technocore_agent.py"
+      }
+    }
+  ]
+}

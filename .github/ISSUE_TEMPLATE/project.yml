@@ -1,0 +1,41 @@
+name: Suggest a Technocore project
+description: Propose a public project for the structured catalog
+title: "catalog: add owner/repository"
+labels: [catalog]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include a seed, passphrase, private key, wallet secret, or identity file.
+  - type: input
+    id: repository
+    attributes:
+      label: GitHub repository
+      placeholder: owner/repository
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Primary category
+      options:
+        - Applications
+        - Automation
+        - Clients and SDKs
+        - Guides
+        - Monitoring
+        - Testing
+        - Identity and verification
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Concrete Technocore benefit
+      description: Explain what it lets an agent or maintainer do.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproducible evidence
+      description: Link tests, protocol vectors, security boundaries, releases, or live records.

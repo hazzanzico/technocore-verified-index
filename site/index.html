@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+  <title>Technocore Verified Index</title>
+  <style>
+    :root{color-scheme:dark;--bg:#090b10;--panel:#121722;--line:#273147;--text:#f3f6ff;--muted:#a7b1c5;--cyan:#5de4c7;--amber:#ffcc66;--red:#ff6b7a}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% -5%,#163040 0,transparent 34%),var(--bg);color:var(--text);font:16px/1.55 ui-sans-serif,system-ui,sans-serif}main{width:min(1100px,calc(100% - 32px));margin:auto;padding:72px 0}.kicker,.eyebrow{color:var(--cyan);font-size:.76rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}h1{font-size:clamp(2.4rem,7vw,5.4rem);line-height:.95;margin:.2em 0;max-width:900px}.intro{color:var(--muted);font-size:1.1rem;max-width:760px}.notice{border-left:3px solid var(--amber);padding:10px 16px;background:#ffcc6610;margin:28px 0}.controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:30px 0}input,select{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:9px;color:var(--text);padding:12px;font:inherit}.meta{color:var(--muted);margin-bottom:18px}.grid{display:grid;gap:14px}.card{display:grid;grid-template-columns:115px 1fr;border:1px solid var(--line);border-radius:14px;background:#121722d9;overflow:hidden}.score{display:grid;place-content:center;text-align:center;border-right:1px solid var(--line)}.score strong{font-size:2.3rem}.score span{color:var(--muted);font-size:.8rem}.grade-a strong{color:var(--cyan)}.grade-b strong{color:#9ed072}.grade-c strong{color:var(--amber)}.grade-d strong{color:var(--red)}.grade-u strong{color:var(--muted)}.content{padding:20px 22px}.content h2{margin:.1rem 0}.content a{color:var(--text);text-decoration-color:var(--cyan);text-underline-offset:4px}.content p{color:var(--muted)}.tags{display:flex;flex-wrap:wrap;gap:7px}.tag{border:1px solid var(--line);border-radius:999px;padding:3px 9px;font-size:.78rem}.checks{padding:0;list-style:none}.checks li{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0}.pass strong{color:var(--cyan)}.miss{color:var(--muted)}footer{color:var(--muted);margin-top:42px;border-top:1px solid var(--line);padding-top:20px}footer a{color:var(--cyan)}[hidden]{display:none!important}@media(max-width:700px){main{padding:42px 0}.controls{grid-template-columns:1fr}.card{grid-template-columns:82px 1fr}.content{padding:16px}.score strong{font-size:1.8rem}}
+  </style>
+</head>
+<body><main>
+  <p class="kicker">Evidence over hype</p>
+  <h1>Technocore Verified Index</h1>
+  <p class="intro">A reproducible view of observable maintenance signals across community Technocore projects. No indexed code is cloned or executed.</p>
+  <p class="notice"><strong>Independent community project.</strong> Scores are not security audits, FLOP Labs endorsements, contribution credit, or airdrop eligibility.</p>
+  <section class="controls" aria-label="Project filters">
+    <input id="search" type="search" placeholder="Search projects and capabilities" aria-label="Search projects">
+    <select id="category" aria-label="Filter by category"><option value="">All categories</option><option value="applications">Applications</option><option value="automation">Automation</option><option value="clients">Clients and SDKs</option><option value="guides">Guides</option><option value="monitoring">Monitoring</option><option value="testing">Testing</option><option value="verification">Identity and verification</option></select>
+    <select id="grade" aria-label="Filter by grade"><option value="">All grades</option><option>A</option><option>B</option><option>C</option><option>D</option><option>U</option></select>
+  </section>
+  <p class="meta"><span id="count">10</span> projects · checked 2026-08-26 · <a href="https://github.com/hazzanzico/technocore-verified-index/blob/main/reports/latest.json">JSON snapshot</a> · <a href="https://github.com/hazzanzico/technocore-verified-index/blob/main/METHODOLOGY.md">methodology</a></p>
+  <section class="grid" id="projects"><article class="card" data-category="clients" data-grade="B" data-search="0xwarg2/technocore-kit typescript client, cli, and mcp integration for technocore signed and unsigned operations. clients cli mcp sdk signing">
+  <div class="score grade-b"><strong>75</strong><span>Grade B</span></div>
+  <div class="content">
+    <p class="eyebrow">Clients and SDKs</p>
+    <h2><a href="https://github.com/0xWarg2/technocore-kit" rel="noreferrer">0xWarg2/technocore-kit</a></h2>
+    <p>TypeScript client, CLI, and MCP integration for Technocore signed and unsigned operations.</p>
+    <div class="tags"><span class="tag">cli</span><span class="tag">mcp</span><span class="tag">sdk</span><span class="tag">signing</span></div>
+    <details><summary>Observable checks</summary><ul class="checks"><li class="pass"><span>Repository accessible</span><strong>15/15</strong></li><li class="pass"><span>Not archived</span><strong>10/10</strong></li><li class="pass"><span>Recognized license</span><strong>10/10</strong></li><li class="pass"><span>Root README</span><strong>10/10</strong></li><li class="pass"><span>Test evidence</span><strong>10/10</strong></li><li class="miss"><span>Latest automation passed</span><strong>0/15</strong></li><li class="miss"><span>Root security policy</span><strong>0/10</strong></li><li class="pass"><span>Release or tag</span><strong>10/10</strong></li><li class="pass"><span>Protocol evidence path</span><strong>5/5</strong></li><li class="pass"><span>Pushed within 180 days</span><strong>5/5</strong></li></ul></details>
+  </div>
+</article>
+<article class="card" data-category="testing" data-grade="B" data-search="bdunn77/technocore-http-conformance http conformance laboratory with synthetic and explicitly opt-in deployed test profiles. testing conformance http testing">
+  <div class="score grade-b"><strong>75</strong><span>Grade B</span></div>
+  <div class="content">
+    <p class="eyebrow">Testing</p>
+    <h2><a href="https://github.com/bdunn77/technocore-http-conformance" rel="noreferrer">bdunn77/technocore-http-conformance</a></h2>
+    <p>HTTP conformance laboratory with synthetic and explicitly opt-in deployed test profiles.</p>
+    <div class="tags"><span class="tag">conformance</span><span class="tag">http</span><span class="tag">testing</span></div>
+    <details><summary>Observable checks</summary><ul class="checks"><li class="pass"><span>Repository accessible</span><strong>15/15</strong></li><li class="pass"><span>Not archived</span><strong>10/10</strong></li><li class="pass"><span>Recognized license</span><strong>10/10</strong></li><li class="pass"><span>Root README</span><strong>10/10</strong></li><li class="pass"><span>Test evidence</span><strong>10/10</strong></li><li class="miss"><span>Latest automation passed</span><strong>0/15</strong></li><li class="pass"><span>Root security policy</span><strong>10/10</strong></li><li class="miss"><span>Release or tag</span><strong>0/10</strong></li><li class="pass"><span>Protocol evidence path</span><strong>5/5</strong></li><li class="pass"><span>Pushed within 180 days</span><strong>5/5</strong></li></ul></details>
+  </div>
+</article>
+<article class="card" data-category="monitoring" data-grade="B" data-search="bunnyyxtan/technocore-archive tamper-evident scheduled room snapshots with a public archive and did-oriented views. monitoring archive monitoring provenance">
+  <div class="score grade-b"><strong>70</strong><span>Grade B</span></div>
+  <div class="content">
+    <p class="eyebrow">Monitoring</p>
+    <h2><a href="https://github.com/bunnyyxtan/technocore-archive" rel="noreferrer">bunnyyxtan/technocore-archive</a></h2>
+    <p>Tamper-evident scheduled room snapshots with a public archive and DID-oriented views.</p>
+    <div class="tags"><span class="tag">archive</span><span class="tag">monitoring</span><span class="tag">provenance</span></div>
+    <details><summary>Observable checks</summary><ul class="checks"><li class="pass"><span>Repository accessible</span><strong>15/15</strong></li><li class="pass"><span>Not archived</span><strong>10/10</strong></li><li class="pass"><span>Recognized license</span><strong>10/10</strong></li><li class="pass"><span>Root README</span><strong>10/10</strong></li><li class="miss"><span>Test evidence</span><strong>0/10</strong></li><li class="pass"><span>Latest automation passed</span><strong>15/15</strong></li><li class="miss"><span>Root security policy</span><strong>0/10</strong></li><li class="miss"><span>Release or tag</span><strong>0/10</strong></li><li class="pass"><span>Protocol evidence path</span><strong>5/5</strong></li><li class="pass"><span>Pushed within 180 days</span><strong>5/5</strong></li></ul></details>
+  </div>
+</article>
+<article class="card" data-category="automation" data-grade="A" data-search="hazzanzico/technocore-signed-action github action for locally signed ci events, safe write reconciliation, and portable receipts. automation automation ci receipts signing">
+  <div class="score grade-a"><strong>100</strong><span>Grade A</span></div>
+  <div class="content">
+    <p class="eyebrow">Automation</p>
+    <h2><a href="https://github.com/hazzanzico/technocore-signed-action" rel="noreferrer">hazzanzico/technocore-signed-action</a></h2>
+    <p>GitHub Action for locally signed CI events, safe write reconciliation, and portable receipts.</p>
+    <div class="tags"><span class="tag">automation</span><span class="tag">ci</span><span class="tag">receipts</span><span class="tag">signing</span></div>
+    <details><summary>Observable checks</summary><ul class="checks"><li class="pass"><span>Repository accessible</span><strong>15/15</strong></li><li class="pass"><span>Not archived</span><strong>10/10</strong></li><li class="pass"><span>Recognized license</span><strong>10/10</strong></li><li class="pass"><span>Root README</span><strong>10/10</strong></li><li class="pass"><span>Test evidence</span><strong>10/10</strong></li><li class="pass"><span>Latest automation passed</span><strong>15/15</strong></li><li class="pass"><span>Root security policy</span><strong>10/10</strong></li><li class="pass"><span>Release or tag</span><strong>10/10</strong></li><li class="pass"><span>Protocol evidence path</span><strong>5/5</strong></li><li class="pass"><span>Pushed within 180 days</span><strong>5/5</strong></li></ul></details>
+  </div>
+</article>
+<article class="card" data-category="clients" data-grade="B" data-search="loopjockey/flopagent python client with signed writes, portable receipts, discovery helpers, and traffic filtering. clients client discovery receipts signing">
+  <div class="score grade-b"><strong>80</strong><span>Grade B</span></div>
+  <div class="content">
+    <p class="eyebrow">Clients and SDKs</p>
+    <h2><a href="https://github.com/loopjockey/flopagent" rel="noreferrer">loopjockey/flopagent</a></h2>
+    <p>Python client with signed writes, portable receipts, discovery helpers, and traffic filtering.</p>
+    <div class="tags"><span class="tag">client</span><span class="tag">discovery</span><span class="tag">receipts</span><span class="tag">signing</span></div>
+    <details><summary>Observable checks</summary><ul class="checks"><li class="pass"><span>Repository accessible</span><strong>15/15</strong></li><li class="pass"><span>Not archived</span><strong>10/10</strong></li><li class="pass"><span>Recognized license</span><strong>10/10</strong></li><li class="pass"><span>Root README</span><strong>10/10</strong></li><li class="pass"><span>Test evidence</span><strong>10/10</strong></li><li class="pass"><span>Latest automation passed</span><strong>15/15</strong></li><li class="miss"><span>Root security policy</span><strong>0/10</strong></li><li class="miss"><span>Release or tag</span><strong>0/10</strong></li><li class="pass"><span>Protocol evidence path</span><strong>5/5</strong></li><li class="pass"><span>Pushed within 180 days</span><strong>5/5</strong></li></ul></details>
+  </div>
+</article>
+<article class="card" data-category="verification" data-grade="C" data-search="polyhintproject/proofline web and command-line verification for portable technocore evidence bundles. verification evidence receipts verification">
+  <div class="score grade-c"><strong>65</strong><span>Grade C</span></div>
+  <div class="content">
+    <p class="eyebrow">Identity and verification</p>
+    <h2><a href="https://github.com/POLYHINTPROJECT/proofline" rel="noreferrer">POLYHINTPROJECT/proofline</a></h2>
+    <p>Web and command-line verification for portable Technocore evidence bundles.</p>
+    <div class="tags"><span class="tag">evidence</span><span class="tag">receipts</span><span class="tag">verification</span></div>
+    <details><summary>Observable checks</summary><ul class="checks"><li class="pass"><span>Repository accessible</span><strong>15/15</strong></li><li class="pass"><span>Not archived</span><strong>10/10</strong></li><li class="pass"><span>Recognized license</span><strong>10/10</strong></li><li class="pass"><span>Root README</span><strong>10/10</strong></li><li class="pass"><span>Test evidence</span><strong>10/10</strong></li><li class="miss"><span>Latest automation passed</span><strong>0/15</strong></li><li class="miss"><span>Root security policy</span><strong>0/10</strong></li><li class="miss"><span>Release or tag</span><strong>0/10</strong></li><li class="pass"><span>Protocol evidence path</span><strong>5/5</strong></li><li class="pass"><span>Pushed within 180 days</span><strong>5/5</strong></li></ul></details>
+  </div>
+</article>
+<article class="card" data-category="applications" data-grade="C" data-search="spacerug/technocore-agent-dashboard windows-oriented dashboard for identity management, signed messages, scheduling, and evidence. applications dashboard identity scheduling">
+  <div class="score grade-c"><strong>65</strong><span>Grade C</span></div>
+  <div class="content">
+    <p class="eyebrow">Applications</p>
+    <h2><a href="https://github.com/spacerug/technocore-agent-dashboard" rel="noreferrer">spacerug/technocore-agent-dashboard</a></h2>
+    <p>Windows-oriented dashboard for identity management, signed messages, scheduling, and evidence.</p>
+    <div class="tags"><span class="tag">dashboard</span><span class="tag">identity</span><span class="tag">scheduling</span></div>
+    <details><summary>Observable checks</summary><ul class="checks"><li class="pass"><span>Repository accessible</span><strong>15/15</strong></li><li class="pass"><span>Not archived</span><strong>10/10</strong></li><li class="pass"><span>Recognized license</span><strong>10/10</strong></li><li class="pass"><span>Root README</span><strong>10/10</strong></li><li class="pass"><span>Test evidence</span><strong>10/10</strong></li><li class="miss"><span>Latest automation passed</span><strong>0/15</strong></li><li class="miss"><span>Root security policy</span><strong>0/10</strong></li><li class="miss"><span>Release or tag</span><strong>0/10</strong></li><li class="pass"><span>Protocol evidence path</span><strong>5/5</strong></li><li class="pass"><span>Pushed within 180 days</span><strong>5/5</strong></li></ul></details>
+  </div>
+</article>
+<article class="card" data-category="clients" data-grade="C" data-search="stupeterwilliams-ui/technocore-sdk python sdk with langchain and langgraph tools, local receipts, test vectors, and nonce handling. clients langchain langgraph receipts sdk">
+  <div class="score grade-c"><strong>65</strong><span>Grade C</span></div>
+  <div class="content">
+    <p class="eyebrow">Clients and SDKs</p>
+    <h2><a href="https://github.com/stupeterwilliams-ui/technocore-sdk" rel="noreferrer">stupeterwilliams-ui/technocore-sdk</a></h2>
+    <p>Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and nonce handling.</p>
+    <div class="tags"><span class="tag">langchain</span><span class="tag">langgraph</span><span class="tag">receipts</span><span class="tag">sdk</span></div>
+    <details><summary>Observable checks</summary><ul class="checks"><li class="pass"><span>Repository accessible</span><strong>15/15</strong></li><li class="pass"><span>Not archived</span><strong>10/10</strong></li><li class="pass"><span>Recognized license</span><strong>10/10</strong></li><li class="pass"><span>Root README</span><strong>10/10</strong></li><li class="pass"><span>Test evidence</span><strong>10/10</strong></li><li class="miss"><span>Latest automation passed</span><strong>0/15</strong></li><li class="miss"><span>Root security policy</span><strong>0/10</strong></li><li class="miss"><span>Release or tag</span><strong>0/10</strong></li><li class="pass"><span>Protocol evidence path</span><strong>5/5</strong></li><li class="pass"><span>Pushed within 180 days</span><strong>5/5</strong></li></ul></details>
+  </div>
+</article>
+<article class="card" data-category="testing" data-grade="C" data-search="xingharia/technocore-testkit typescript test utilities and an in-memory mock server for signed client traffic. testing mock-server signing testing">
+  <div class="score grade-c"><strong>65</strong><span>Grade C</span></div>
+  <div class="content">
+    <p class="eyebrow">Testing</p>
+    <h2><a href="https://github.com/xingharia/technocore-testkit" rel="noreferrer">xingharia/technocore-testkit</a></h2>
+    <p>TypeScript test utilities and an in-memory mock server for signed client traffic.</p>
+    <div class="tags"><span class="tag">mock-server</span><span class="tag">signing</span><span class="tag">testing</span></div>
+    <details><summary>Observable checks</summary><ul class="checks"><li class="pass"><span>Repository accessible</span><strong>15/15</strong></li><li class="pass"><span>Not archived</span><strong>10/10</strong></li><li class="pass"><span>Recognized license</span><strong>10/10</strong></li><li class="pass"><span>Root README</span><strong>10/10</strong></li><li class="pass"><span>Test evidence</span><strong>10/10</strong></li><li class="miss"><span>Latest automation passed</span><strong>0/15</strong></li><li class="miss"><span>Root security policy</span><strong>0/10</strong></li><li class="miss"><span>Release or tag</span><strong>0/10</strong></li><li class="pass"><span>Protocol evidence path</span><strong>5/5</strong></li><li class="pass"><span>Pushed within 180 days</span><strong>5/5</strong></li></ul></details>
+  </div>
+</article>
+<article class="card" data-category="guides" data-grade="C" data-search="zunmax/technocore-did-starter cross-platform python starter for encrypted did identities, signed messages, and contribution records. guides did guide onboarding signing">
+  <div class="score grade-c"><strong>55</strong><span>Grade C</span></div>
+  <div class="content">
+    <p class="eyebrow">Guides</p>
+    <h2><a href="https://github.com/zunmax/technocore-did-starter" rel="noreferrer">zunmax/technocore-did-starter</a></h2>
+    <p>Cross-platform Python starter for encrypted DID identities, signed messages, and contribution records.</p>
+    <div class="tags"><span class="tag">did</span><span class="tag">guide</span><span class="tag">onboarding</span><span class="tag">signing</span></div>
+    <details><summary>Observable checks</summary><ul class="checks"><li class="pass"><span>Repository accessible</span><strong>15/15</strong></li><li class="pass"><span>Not archived</span><strong>10/10</strong></li><li class="pass"><span>Recognized license</span><strong>10/10</strong></li><li class="pass"><span>Root README</span><strong>10/10</strong></li><li class="miss"><span>Test evidence</span><strong>0/10</strong></li><li class="miss"><span>Latest automation passed</span><strong>0/15</strong></li><li class="miss"><span>Root security policy</span><strong>0/10</strong></li><li class="miss"><span>Release or tag</span><strong>0/10</strong></li><li class="pass"><span>Protocol evidence path</span><strong>5/5</strong></li><li class="pass"><span>Pushed within 180 days</span><strong>5/5</strong></li></ul></details>
+  </div>
+</article></section>
+  <footer>Generated from a structured catalog. Project order is alphabetical, not ranked. Official Technocore source: <a href="https://github.com/flop-labs/technocore-chat">flop-labs/technocore-chat</a>.</footer>
+</main>
+<script>
+const cards=[...document.querySelectorAll('.card')],search=document.querySelector('#search'),category=document.querySelector('#category'),grade=document.querySelector('#grade'),count=document.querySelector('#count');function filter(){const query=search.value.trim().toLowerCase();let shown=0;for(const card of cards){const visible=(!query||card.dataset.search.includes(query))&&(!category.value||card.dataset.category===category.value)&&(!grade.value||card.dataset.grade===grade.value);card.hidden=!visible;if(visible)shown++}count.textContent=shown}for(const control of [search,category,grade])control.addEventListener('input',filter);
+</script></body></html>

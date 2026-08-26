@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hazzanzico/technocore-verified-index/blob/main/schemas/report.schema.json",
+  "title": "Technocore Verified Index report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "methodology_version", "generated_at", "project_count", "projects"],
+  "properties": {
+    "schema": { "const": "technocore-verified-index-report-v1" },
+    "methodology_version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "project_count": { "type": "integer", "minimum": 0 },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["repo", "category", "summary", "platforms", "tags", "observation", "readiness"],
+        "properties": {
+          "repo": { "type": "string" },
+          "category": { "type": "string" },
+          "summary": { "type": "string" },
+          "platforms": { "type": "array", "items": { "type": "string" } },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "observation": { "type": "object" },
+          "readiness": {
+            "type": "object",
+            "required": ["score", "grade", "checks"],
+            "properties": {
+              "score": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+              "grade": { "enum": ["A", "B", "C", "D", "U"] },
+              "checks": { "type": "array", "minItems": 10, "maxItems": 10 }
+            }
+          }
+        }
+      }
+    }
+  }
+}
