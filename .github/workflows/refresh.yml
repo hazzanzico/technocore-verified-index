@@ -7,13 +7,18 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: verified-index-refresh
+  group: pages
   cancel-in-progress: false
 
 jobs:
   refresh:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -28,7 +33,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - run: npm run archive
-      - run: npm test
+      - run: npm run test:coverage
+      - run: npm run check
+      - run: npm run validate
+      - run: npm run render
       - run: git diff --check
       - name: Commit changed observations
         run: |
@@ -41,3 +49,10 @@ jobs:
           git add README.md reports/latest.json reports/latest.md reports/history site/index.html
           git commit -m "data: refresh verified index"
           git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy refreshed site
+        id: deployment
+        uses: actions/deploy-pages@v4
