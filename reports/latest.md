@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-08-26T09:57:14.828Z. These are observable
+Generated 2026-08-26T10:03:34.320Z. These are observable
 repository-readiness signals, not security or protocol certifications. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
 
