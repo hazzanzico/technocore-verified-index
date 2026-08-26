@@ -1,6 +1,6 @@
 # UI redesign requirements
 
-Status: implemented and verified; publication in progress.
+Status: published and verified; real-user adoption feedback pending.
 
 ## Product position
 
