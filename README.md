@@ -20,7 +20,7 @@ around [FLOP Labs' Technocore Chat](https://github.com/flop-labs/technocore-chat
 
 ## Current index
 
-Generated 2026-08-26T09:28:20.194Z from 10 catalogued projects.
+Generated 2026-08-26T09:57:14.828Z from 10 catalogued projects.
 Projects are ordered by repository name, not score.
 
 | Project | Purpose | Category | Grade | Readiness | Strong signals | API state |

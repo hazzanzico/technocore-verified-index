@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-08-26T09:28:20.194Z. These are observable
+Generated 2026-08-26T09:57:14.828Z. These are observable
 repository-readiness signals, not security or protocol certifications. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
 
@@ -66,8 +66,8 @@ Tamper-evident scheduled room snapshots with a public archive and DID-oriented v
 - Platforms: github-actions
 - License: MIT
 - Default branch: main
-- Last push: 2026-08-26T09:17:45Z
-- Latest completed automation: [success](https://github.com/bunnyyxtan/technocore-archive/actions/runs/32952233517)
+- Last push: 2026-08-26T09:31:49Z
+- Latest completed automation: [success](https://github.com/bunnyyxtan/technocore-archive/actions/runs/32953491811)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
