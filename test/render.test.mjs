@@ -84,6 +84,19 @@ test("renders a progressive, CSP-constrained dashboard", () => {
   assert.doesNotMatch(output, /<style>|<script>[^<]/);
 });
 
+test("renders the compact repository-first interface", () => {
+  const output = renderHtml(report);
+  assert.match(output, /Technocore repositories/);
+  assert.match(output, /Community-maintained evidence index/);
+  assert.match(output, /class="project-card"/);
+  assert.match(output, /class="card-main"/);
+  assert.match(output, /class="coverage-score"/);
+  assert.match(output, /data-details-template/);
+  assert.match(output, /detailed report/);
+  assert.match(output, />List<\/button>/);
+  assert.doesNotMatch(output, /See what the ecosystem can show/);
+});
+
 test("renders history changes and chart readiness honestly", () => {
   const previous = structuredClone(report);
   previous.generated_at = "2026-08-25T00:00:00.000Z";

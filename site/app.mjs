@@ -41,6 +41,20 @@ const viewButtons = [...document.querySelectorAll("[data-view-button]")];
 const cards = [...document.querySelectorAll("[data-project-card]")];
 const rows = [...document.querySelectorAll("[data-project-row]")];
 
+function hydrateDetails(details) {
+  const template = details.querySelector("[data-details-template]");
+  const mount = details.querySelector("[data-details-mount]");
+  if (!template || !mount || mount.childElementCount) return;
+  mount.append(template.content.cloneNode(true));
+}
+
+for (const details of document.querySelectorAll(".project-details")) {
+  details.addEventListener("toggle", () => {
+    if (details.open) hydrateDetails(details);
+  });
+  if (details.open) hydrateDetails(details);
+}
+
 function checksFrom(value) {
   return Object.fromEntries(
     String(value ?? "")

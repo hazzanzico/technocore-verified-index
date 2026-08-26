@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.3.0 - 2026-08-26
+
+- Redesign the site as a compact, repository-first interface inspired by
+  GitHub's information density, system typography, restrained spacing, and
+  familiar list controls.
+- Expand the catalog from 10 to 20 community repositories after checking
+  public licensing, Technocore relevance, and exact protocol evidence paths.
+- Keep evidence coverage explicitly non-ranking, alphabetical by default, and
+  transparent about maintainer ownership.
+- Retain the existing filters, evidence inspection, comparisons, history,
+  shareable views, responsive behavior, dark mode, and no-JavaScript content.
+
 ## 0.2.0 - 2026-08-26
 
 - Replace the readiness score and letter grades with Methodology 2.0's ten

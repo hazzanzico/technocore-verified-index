@@ -325,7 +325,6 @@ function quickSignals(project) {
 }
 
 function renderCard(project, history) {
-  const [owner, name] = project.repo.split("/");
   const percentage = project.coverage.percentage;
   const displayedPercentage = percentage === null ? "—" : `${percentage}%`;
   const platforms = project.platforms.map((platform) => `<span class="pill">${escapeHtml(platform)}</span>`).join("");
@@ -333,19 +332,15 @@ function renderCard(project, history) {
   const searchable = [project.repo, project.summary, project.category, ...project.platforms, ...project.tags].join(" ").toLowerCase();
   const maintainerOwned = project.repo === MAINTAINER_PROJECT ? `<span class="pill">Maintainer-owned</span>` : "";
   const release = project.observation.version.release ?? project.observation.version.tag ?? "not observed";
+  const pushed = project.observation.pushed_at?.slice(0, 10) ?? "not observed";
   return `<article class="project-card" data-project-card data-repo="${escapeHtml(project.repo)}" data-category="${escapeHtml(project.category)}" data-coverage="${escapeHtml(project.coverage.label)}" data-percentage="${percentage ?? ""}" data-platforms="${escapeHtml(project.platforms.join(","))}" data-checks="${escapeHtml(checksData(project))}" data-search="${escapeHtml(searchable)}" data-pushed-at="${escapeHtml(project.observation.pushed_at ?? "")}">
-  <div class="card-top">
-    <div><span class="repo-owner">${escapeHtml(owner)}</span><h3><a href="${projectUrl(project.repo)}" rel="noreferrer">${escapeHtml(name)}</a></h3></div>
-    <div class="coverage-visual"><svg viewBox="0 0 42 42" aria-hidden="true"><circle class="coverage-track" cx="21" cy="21" r="15.9"></circle><circle class="coverage-value" cx="21" cy="21" r="15.9" pathLength="100" stroke-dasharray="${percentage ?? 0} 100"></circle></svg><div class="coverage-number"><strong>${displayedPercentage}</strong><span>coverage</span></div></div>
-  </div>
-  <div class="project-body">
-    <p class="project-summary">${escapeHtml(project.summary)}</p>
-    <div class="label-row"><span class="pill pill-category">${escapeHtml(categoryLabel(project.category))}</span><span class="pill pill-${escapeHtml(project.coverage.label)}">${escapeHtml(coverageLabel(project.coverage.label))}</span>${maintainerOwned}</div>
+  <div class="card-main">
+    <header class="card-heading"><div><h3><a href="${projectUrl(project.repo)}" rel="noreferrer">${escapeHtml(project.repo)}</a></h3><p class="project-summary">${escapeHtml(project.summary)}</p><div class="label-row"><span class="pill pill-category">${escapeHtml(categoryLabel(project.category))}</span><span class="pill pill-${escapeHtml(project.coverage.label)}">${escapeHtml(coverageLabel(project.coverage.label))}</span>${maintainerOwned}</div></div><div class="coverage-score" aria-label="${escapeHtml(coverageText(project))} observable evidence coverage"><strong>${displayedPercentage}</strong><span>${escapeHtml(coverageLabel(project.coverage.label))}</span></div></header>
     <div class="tag-row">${platforms}${tags}</div>
     <div class="quick-signals" aria-label="Selected evidence signals">${quickSignals(project)}</div>
-    <details class="project-details"><summary>Inspect ${project.coverage.present}/${project.coverage.total} evidence signals</summary><div class="details-grid">${groupedEvidence(project)}<section class="detail-block"><h4>Repository metadata</h4><dl class="metadata"><dt>License</dt><dd>${escapeHtml(project.observation.license ?? "not observed")}</dd><dt>Last push</dt><dd>${escapeHtml(project.observation.pushed_at ?? "not observed")}</dd><dt>Branch</dt><dd>${escapeHtml(project.observation.default_branch ?? "not observed")}</dd><dt>Version</dt><dd>${escapeHtml(release)}</dd><dt>Observed</dt><dd>${escapeHtml(project.coverage.observed)}/${escapeHtml(project.coverage.total)} signals</dd></dl>${trendMarkup(project, history)}</section></div></details>
+    <details class="project-details"><summary>Inspect ${project.coverage.present}/${project.coverage.total} evidence signals</summary><template data-details-template><div class="details-grid">${groupedEvidence(project)}<section class="detail-block"><h4>Repository metadata</h4><dl class="metadata"><dt>License</dt><dd>${escapeHtml(project.observation.license ?? "not observed")}</dd><dt>Last push</dt><dd>${escapeHtml(project.observation.pushed_at ?? "not observed")}</dd><dt>Branch</dt><dd>${escapeHtml(project.observation.default_branch ?? "not observed")}</dd><dt>Version</dt><dd>${escapeHtml(release)}</dd><dt>Observed</dt><dd>${escapeHtml(project.coverage.observed)}/${escapeHtml(project.coverage.total)} signals</dd></dl>${trendMarkup(project, history)}</section></div></template><div data-details-mount></div><noscript><p class="noscript-detail">JavaScript is required to expand this row. Exact evidence remains available in the <a href="${INDEX_REPOSITORY}/blob/main/reports/latest.md">detailed report</a>.</p></noscript></details>
   </div>
-  <div class="card-footer"><label class="compare-control"><input type="checkbox" value="${escapeHtml(project.repo)}" data-compare> Add to comparison</label></div>
+  <div class="card-side"><label class="compare-control"><input type="checkbox" value="${escapeHtml(project.repo)}" data-compare> Compare</label><span class="card-updated">Updated ${escapeHtml(pushed)}</span></div>
 </article>`;
 }
 
@@ -382,7 +377,7 @@ export function renderHtml(report, historyReports = []) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="An evidence-first, automatically refreshed index of Technocore community projects.">
-  <meta name="theme-color" content="#070a0f">
+  <meta name="theme-color" content="#f6f8fa">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'none'; connect-src 'self'; base-uri 'none'; form-action 'none'">
   <title>Technocore Verified Index</title>
   <link rel="stylesheet" href="./styles.css">
@@ -391,12 +386,12 @@ export function renderHtml(report, historyReports = []) {
 <a class="skip-link" href="#explorer">Skip to project explorer</a>
 <header class="site-shell topbar">
   <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">TVI</span><span class="brand-copy">Technocore Verified Index<small>Independent evidence index</small></span></a>
-  <nav class="topnav" aria-label="Primary"><a href="#changes">Changes</a><a href="${INDEX_REPOSITORY}/blob/main/METHODOLOGY.md">Methodology</a><a href="${INDEX_REPOSITORY}">GitHub</a></nav>
+  <nav class="topnav" aria-label="Primary"><a href="#explorer">Projects</a><a href="#changes">Changes</a><a href="${INDEX_REPOSITORY}/blob/main/METHODOLOGY.md">Methodology</a><a href="${INDEX_REPOSITORY}">GitHub</a></nav>
 </header>
 <main>
   <section class="site-shell hero" aria-labelledby="page-title">
-    <div><p class="kicker">Evidence over hype</p><h1 id="page-title">See what the ecosystem can show.</h1><p class="hero-copy">A reproducible view of observable GitHub evidence across community Technocore projects. Updated automatically, explained signal by signal, and never ranked by popularity.</p><div class="hero-actions"><a class="button button-primary" href="#explorer">Explore ${report.project_count} projects</a><a class="button" href="${INDEX_REPOSITORY}/issues/new?template=project.yml">Submit or correct a project</a></div></div>
-    <aside class="hero-aside" aria-label="Latest observation"><p class="aside-title">Latest observation</p><p class="aside-value"><time datetime="${escapeHtml(report.generated_at)}">${escapeHtml(readableTimestamp(report.generated_at))}</time></p><p class="aside-note">Static hosting, automatically refreshed data. No indexed repository is cloned, installed, imported, or executed.</p></aside>
+    <div><p class="kicker">Community-maintained evidence index</p><h1 id="page-title">Technocore repositories</h1><p class="hero-copy">Browse community tools, clients, guides, monitors, and verification projects. Every result links back to observable GitHub evidence.</p></div>
+    <div class="hero-actions"><a class="button button-primary" href="${INDEX_REPOSITORY}/issues/new?template=project.yml">Submit a project</a><a class="button" href="${INDEX_REPOSITORY}/blob/main/METHODOLOGY.md">View methodology</a></div>
   </section>
 
   <section class="site-shell metrics" aria-label="Index overview">
@@ -406,12 +401,12 @@ export function renderHtml(report, historyReports = []) {
     <article class="metric"><strong>${fresh}</strong><span>pushed within 180 days</span></article>
   </section>
 
-  <aside class="site-shell disclosure"><span class="disclosure-icon" aria-hidden="true">◆</span><p><strong>Coverage is not quality.</strong> 100% means all ten measured signals were found—not perfect, best, secure, endorsed, or airdrop-eligible. Projects are alphabetical by default. The index maintainer also owns <a href="https://github.com/${MAINTAINER_PROJECT}">${MAINTAINER_PROJECT}</a>.</p></aside>
+  <div class="site-shell scan-summary"><span><strong>Last refreshed</strong> <time datetime="${escapeHtml(report.generated_at)}">${escapeHtml(readableTimestamp(report.generated_at))}</time></span><span>Static, read-only GitHub inspection. Indexed code is never executed.</span></div>
 
-  <section class="site-shell section" id="changes" aria-labelledby="changes-title"><div class="section-heading"><div><p class="eyebrow">Daily history</p><h2 id="changes-title">What changed?</h2><p>${history.snapshot_count} dated snapshot${history.snapshot_count === 1 ? "" : "s"} retained from ${escapeHtml(history.first_date)} through ${escapeHtml(history.latest_date)}.</p></div><a class="button button-quiet" href="${INDEX_REPOSITORY}/tree/main/reports/history">Browse history</a></div><div class="history-panel">${renderChanges(history)}</div></section>
+  <aside class="site-shell disclosure"><span class="disclosure-icon" aria-hidden="true">!</span><p><strong>Evidence coverage is not a ranking.</strong> 100% means all ten measured signals were found, not that a project is perfect, secure, endorsed, or airdrop-eligible. The default order is alphabetical. The index maintainer also owns <a href="https://github.com/${MAINTAINER_PROJECT}">${MAINTAINER_PROJECT}</a>.</p></aside>
 
   <section class="site-shell section explorer" id="explorer" aria-labelledby="explorer-title">
-    <div class="section-heading"><div><p class="eyebrow">Project explorer</p><h2 id="explorer-title">Find evidence, not winners.</h2><p>Search capabilities, narrow observable signals, and inspect exactly why each result appears.</p></div><div class="section-actions"><a class="button button-quiet" href="${INDEX_REPOSITORY}/blob/main/reports/latest.json">Download JSON</a><a class="button button-quiet" href="${INDEX_REPOSITORY}/blob/main/PROVENANCE.md">Provenance</a></div></div>
+    <div class="section-heading"><div><h2 id="explorer-title">Repositories <span class="count-badge">${report.project_count}</span></h2><p>Search by capability or narrow the list by category, platform, coverage, and observable signal.</p></div><div class="section-actions"><a class="button button-quiet" href="${INDEX_REPOSITORY}/blob/main/reports/latest.json">Download JSON</a><a class="button button-quiet" href="${INDEX_REPOSITORY}/blob/main/PROVENANCE.md">Provenance</a></div></div>
     <div class="toolbar" aria-label="Project filters">
       <div class="field field-search"><label for="search">Search</label><input id="search" type="search" placeholder="Project, platform, or capability" autocomplete="off"></div>
       <div class="field"><label for="category">Category</label><select id="category"><option value="">All categories</option>${categoryOptions}</select></div>
@@ -419,7 +414,7 @@ export function renderHtml(report, historyReports = []) {
       <div class="field"><label for="platform">Platform</label><select id="platform"><option value="">All platforms</option>${platformOptions}</select></div>
       <div class="field"><label for="signal">Required signal</label><select id="signal"><option value="">Any signal state</option><option value="tests">Tests present</option><option value="ci">Automation passed</option><option value="security">Security policy</option><option value="version">Version marker</option><option value="protocol">Technocore evidence</option></select></div>
     </div>
-    <div class="explorer-meta"><p><strong id="result-count">${report.project_count}</strong> projects shown · checked ${checkedDate(report)}</p><div class="explorer-tools"><label class="field"><span class="eyebrow">Sort</span><select id="sort" aria-label="Sort projects"><option value="name">Repository name</option><option value="coverage">Evidence coverage</option><option value="recent">Recent activity</option></select></label><button class="compact-button" id="clear-filters" type="button">Clear filters</button><button class="compact-button" id="share-view" type="button">Share this view</button><button class="view-button" type="button" data-view-button="cards" aria-pressed="true">Cards</button><button class="view-button" type="button" data-view-button="table" aria-pressed="false">Table</button></div></div>
+    <div class="explorer-meta"><p><strong id="result-count">${report.project_count}</strong> projects shown <span aria-hidden="true">·</span> checked ${checkedDate(report)}</p><div class="explorer-tools"><label class="field sort-field"><span>Sort</span><select id="sort" aria-label="Sort projects"><option value="name">Repository name</option><option value="coverage">Evidence coverage</option><option value="recent">Recent activity</option></select></label><button class="compact-button" id="clear-filters" type="button">Clear</button><button class="compact-button" id="share-view" type="button">Share</button><button class="view-button" type="button" data-view-button="cards" aria-pressed="true">List</button><button class="view-button" type="button" data-view-button="table" aria-pressed="false">Table</button></div></div>
     <p class="sr-only" id="result-status" aria-live="polite">${report.project_count} of ${report.project_count} projects shown.</p>
     <div class="project-grid" id="project-cards">${cards}</div>
     <div class="table-wrap" id="project-table-wrap" hidden><table class="project-table"><caption>Observable evidence overview. The default order is alphabetical, not ranked.</caption><thead><tr><th scope="col">Repository</th><th scope="col">Category</th><th scope="col">Label</th><th scope="col">Coverage</th><th scope="col">Signals</th><th scope="col">Last push</th></tr></thead><tbody id="project-table-body">${rows}</tbody></table></div>
@@ -428,6 +423,8 @@ export function renderHtml(report, historyReports = []) {
   </section>
 
   <section class="site-shell section comparison" id="comparison" hidden aria-labelledby="comparison-title"><div class="comparison-shell"><div class="comparison-head"><div><p class="eyebrow">Side by side</p><h2 id="comparison-title">Compare evidence states</h2></div><button class="compact-button" id="clear-comparison" type="button">Clear comparison</button></div><div class="comparison-grid" id="comparison-grid"></div></div></section>
+
+  <section class="site-shell section history-section" id="changes" aria-labelledby="changes-title"><div class="section-heading"><div><h2 id="changes-title">Recent changes</h2><p>${history.snapshot_count} dated snapshot${history.snapshot_count === 1 ? "" : "s"} retained from ${escapeHtml(history.first_date)} through ${escapeHtml(history.latest_date)}.</p></div><a class="button button-quiet" href="${INDEX_REPOSITORY}/tree/main/reports/history">Browse history</a></div><div class="history-panel">${renderChanges(history)}</div></section>
 </main>
 
 <footer class="site-shell site-footer"><div class="footer-grid"><div><strong>Technocore Verified Index</strong><p>Generated from a structured catalog. GitHub is the source of truth; this site is the discovery and explanation layer.</p></div><nav class="footer-links" aria-label="Project links"><a href="${INDEX_REPOSITORY}/blob/main/METHODOLOGY.md">Methodology</a><a href="${INDEX_REPOSITORY}/blob/main/GOVERNANCE.md">Governance</a><a href="${INDEX_REPOSITORY}/blob/main/CONTRIBUTING.md">Contribute</a><a href="https://github.com/flop-labs/technocore-chat">Official Technocore source</a></nav></div><p class="maintainer-disclosure">Independent community project. Listing and coverage do not establish FLOP Labs endorsement, security review, contribution credit, or airdrop eligibility.</p></footer>

@@ -1,9 +1,169 @@
 {
   "schema": "technocore-verified-index-report-v2",
   "methodology_version": "2.0.0",
-  "generated_at": "2026-08-26T14:45:33.862Z",
-  "project_count": 10,
+  "generated_at": "2026-08-26T20:02:40.801Z",
+  "project_count": 20,
   "projects": [
+    {
+      "repo": "0xdirosa/technocore-agent-client",
+      "category": "clients",
+      "summary": "Standalone Python client and agent skill for encrypted DID identities, signed room messages, reading, and durable notes.",
+      "platforms": [
+        "python"
+      ],
+      "tags": [
+        "client",
+        "did",
+        "skill",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "technocore.py"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-26T09:18:35Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": false,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "evidence_paths": {
+          "license": "LICENSE",
+          "readme": "README.md",
+          "tests": null,
+          "security": null,
+          "protocol": "technocore.py"
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "release_url": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "coverage": {
+        "percentage": 60,
+        "label": "partial",
+        "present": 6,
+        "observed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "id": "accessible",
+            "group": "availability",
+            "label": "Repository accessible",
+            "description": "GitHub returned current repository metadata.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "not_archived",
+            "group": "maintenance",
+            "label": "Repository active",
+            "description": "GitHub does not mark the repository as archived.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "group": "documentation",
+            "label": "Recognized license",
+            "description": "GitHub reports a recognized SPDX license.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "group": "documentation",
+            "label": "Root README",
+            "description": "A root README is present in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "group": "verification",
+            "label": "Test evidence",
+            "description": "A conventional test path or test filename is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "ci",
+            "group": "verification",
+            "label": "Latest automation passed",
+            "description": "The latest completed GitHub Actions run succeeded.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "group": "security",
+            "label": "Security policy",
+            "description": "A root SECURITY.md file is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "group": "release",
+            "label": "Version marker",
+            "description": "At least one GitHub release or Git tag exists.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "group": "technocore",
+            "label": "Technocore evidence path",
+            "description": "The catalogued protocol-evidence path exists in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "recent",
+            "group": "maintenance",
+            "label": "Recent activity",
+            "description": "The repository was pushed within the previous 180 days.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          }
+        ]
+      }
+    },
     {
       "repo": "0xWarg2/technocore-kit",
       "category": "clients",
@@ -141,6 +301,166 @@
             "state": "present",
             "passed": true,
             "awarded": 10
+          },
+          {
+            "id": "protocol",
+            "group": "technocore",
+            "label": "Technocore evidence path",
+            "description": "The catalogued protocol-evidence path exists in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "recent",
+            "group": "maintenance",
+            "label": "Recent activity",
+            "description": "The repository was pushed within the previous 180 days.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          }
+        ]
+      }
+    },
+    {
+      "repo": "BambooTuna/technocore-did",
+      "category": "clients",
+      "summary": "Zero-dependency Node command-line tools for local Ed25519 DID identities, signed room posts, and contribution ledgers.",
+      "platforms": [
+        "node"
+      ],
+      "tags": [
+        "cli",
+        "did",
+        "ledger",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "bin/technocore-did.mjs"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-26T00:23:39Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": false,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "evidence_paths": {
+          "license": "LICENSE",
+          "readme": "README.ja.md",
+          "tests": null,
+          "security": null,
+          "protocol": "bin/technocore-did.mjs"
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "release_url": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "coverage": {
+        "percentage": 60,
+        "label": "partial",
+        "present": 6,
+        "observed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "id": "accessible",
+            "group": "availability",
+            "label": "Repository accessible",
+            "description": "GitHub returned current repository metadata.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "not_archived",
+            "group": "maintenance",
+            "label": "Repository active",
+            "description": "GitHub does not mark the repository as archived.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "group": "documentation",
+            "label": "Recognized license",
+            "description": "GitHub reports a recognized SPDX license.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "group": "documentation",
+            "label": "Root README",
+            "description": "A root README is present in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "group": "verification",
+            "label": "Test evidence",
+            "description": "A conventional test path or test filename is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "ci",
+            "group": "verification",
+            "label": "Latest automation passed",
+            "description": "The latest completed GitHub Actions run succeeded.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "group": "security",
+            "label": "Security policy",
+            "description": "A root SECURITY.md file is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "group": "release",
+            "label": "Version marker",
+            "description": "At least one GitHub release or Git tag exists.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
           },
           {
             "id": "protocol",
@@ -344,7 +664,7 @@
         "error": null,
         "archived": false,
         "license": "MIT",
-        "pushed_at": "2026-08-26T09:31:49Z",
+        "pushed_at": "2026-08-26T16:09:47Z",
         "default_branch": "main",
         "stars": 0,
         "forks": 0,
@@ -364,7 +684,7 @@
         "automation": {
           "present": false,
           "conclusion": "success",
-          "url": "https://github.com/bunnyyxtan/technocore-archive/actions/runs/32953491811"
+          "url": "https://github.com/bunnyyxtan/technocore-archive/actions/runs/32986990638"
         },
         "version": {
           "release": null,
@@ -439,6 +759,326 @@
             "state": "present",
             "passed": true,
             "awarded": 10
+          },
+          {
+            "id": "security",
+            "group": "security",
+            "label": "Security policy",
+            "description": "A root SECURITY.md file is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "group": "release",
+            "label": "Version marker",
+            "description": "At least one GitHub release or Git tag exists.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "group": "technocore",
+            "label": "Technocore evidence path",
+            "description": "The catalogued protocol-evidence path exists in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "recent",
+            "group": "maintenance",
+            "label": "Recent activity",
+            "description": "The repository was pushed within the previous 180 days.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          }
+        ]
+      }
+    },
+    {
+      "repo": "eren-karakus0/technocore-keykit",
+      "category": "clients",
+      "summary": "Offline Node toolkit for encrypted local DID identities, Technocore registration records, and cross-checked signed messages.",
+      "platforms": [
+        "node"
+      ],
+      "tags": [
+        "cli",
+        "encryption",
+        "identity",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "test/keykit.test.js"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-26T17:34:09Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "evidence_paths": {
+          "license": "LICENSE",
+          "readme": "README.md",
+          "tests": "test/conformance.mjs",
+          "security": null,
+          "protocol": "test/keykit.test.js"
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "release_url": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "coverage": {
+        "percentage": 70,
+        "label": "strong",
+        "present": 7,
+        "observed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "id": "accessible",
+            "group": "availability",
+            "label": "Repository accessible",
+            "description": "GitHub returned current repository metadata.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "not_archived",
+            "group": "maintenance",
+            "label": "Repository active",
+            "description": "GitHub does not mark the repository as archived.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "group": "documentation",
+            "label": "Recognized license",
+            "description": "GitHub reports a recognized SPDX license.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "group": "documentation",
+            "label": "Root README",
+            "description": "A root README is present in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "group": "verification",
+            "label": "Test evidence",
+            "description": "A conventional test path or test filename is present.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "group": "verification",
+            "label": "Latest automation passed",
+            "description": "The latest completed GitHub Actions run succeeded.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "group": "security",
+            "label": "Security policy",
+            "description": "A root SECURITY.md file is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "group": "release",
+            "label": "Version marker",
+            "description": "At least one GitHub release or Git tag exists.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "group": "technocore",
+            "label": "Technocore evidence path",
+            "description": "The catalogued protocol-evidence path exists in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "recent",
+            "group": "maintenance",
+            "label": "Recent activity",
+            "description": "The repository was pushed within the previous 180 days.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          }
+        ]
+      }
+    },
+    {
+      "repo": "flupyxyz/technocore-idn",
+      "category": "guides",
+      "summary": "Indonesian-language Technocore guide with a lightweight Python client for DID identities, signed messages, and notes.",
+      "platforms": [
+        "python"
+      ],
+      "tags": [
+        "guide",
+        "localization",
+        "sdk",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "tc_idn.py"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-25T10:55:24Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": false,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "evidence_paths": {
+          "license": "LICENSE",
+          "readme": "README.md",
+          "tests": null,
+          "security": null,
+          "protocol": "tc_idn.py"
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "release_url": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "coverage": {
+        "percentage": 60,
+        "label": "partial",
+        "present": 6,
+        "observed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "id": "accessible",
+            "group": "availability",
+            "label": "Repository accessible",
+            "description": "GitHub returned current repository metadata.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "not_archived",
+            "group": "maintenance",
+            "label": "Repository active",
+            "description": "GitHub does not mark the repository as archived.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "group": "documentation",
+            "label": "Recognized license",
+            "description": "GitHub reports a recognized SPDX license.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "group": "documentation",
+            "label": "Root README",
+            "description": "A root README is present in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "group": "verification",
+            "label": "Test evidence",
+            "description": "A conventional test path or test filename is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "ci",
+            "group": "verification",
+            "label": "Latest automation passed",
+            "description": "The latest completed GitHub Actions run succeeded.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
           },
           {
             "id": "security",
@@ -646,6 +1286,167 @@
       }
     },
     {
+      "repo": "kenmori/technocore-ts",
+      "category": "clients",
+      "summary": "Zero-dependency TypeScript client with signed writes, durable nonces, local key handling, and an agent-safe content wrapper.",
+      "platforms": [
+        "node",
+        "typescript"
+      ],
+      "tags": [
+        "cli",
+        "client",
+        "sdk",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "test/client.test.ts"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-26T07:33:56Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "evidence_paths": {
+          "license": "LICENSE",
+          "readme": "README.md",
+          "tests": "test/client.test.ts",
+          "security": null,
+          "protocol": "test/client.test.ts"
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "release_url": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "coverage": {
+        "percentage": 70,
+        "label": "strong",
+        "present": 7,
+        "observed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "id": "accessible",
+            "group": "availability",
+            "label": "Repository accessible",
+            "description": "GitHub returned current repository metadata.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "not_archived",
+            "group": "maintenance",
+            "label": "Repository active",
+            "description": "GitHub does not mark the repository as archived.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "group": "documentation",
+            "label": "Recognized license",
+            "description": "GitHub reports a recognized SPDX license.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "group": "documentation",
+            "label": "Root README",
+            "description": "A root README is present in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "group": "verification",
+            "label": "Test evidence",
+            "description": "A conventional test path or test filename is present.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "group": "verification",
+            "label": "Latest automation passed",
+            "description": "The latest completed GitHub Actions run succeeded.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "group": "security",
+            "label": "Security policy",
+            "description": "A root SECURITY.md file is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "group": "release",
+            "label": "Version marker",
+            "description": "At least one GitHub release or Git tag exists.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "group": "technocore",
+            "label": "Technocore evidence path",
+            "description": "The catalogued protocol-evidence path exists in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "recent",
+            "group": "maintenance",
+            "label": "Recent activity",
+            "description": "The repository was pushed within the previous 180 days.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          }
+        ]
+      }
+    },
+    {
       "repo": "loopjockey/flopagent",
       "category": "clients",
       "summary": "Python client with signed writes, portable receipts, discovery helpers, and traffic filtering.",
@@ -687,6 +1488,167 @@
           "present": true,
           "conclusion": "success",
           "url": "https://github.com/loopjockey/flopagent/actions/runs/32969822042"
+        },
+        "version": {
+          "release": null,
+          "release_url": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "coverage": {
+        "percentage": 80,
+        "label": "strong",
+        "present": 8,
+        "observed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "id": "accessible",
+            "group": "availability",
+            "label": "Repository accessible",
+            "description": "GitHub returned current repository metadata.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "not_archived",
+            "group": "maintenance",
+            "label": "Repository active",
+            "description": "GitHub does not mark the repository as archived.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "group": "documentation",
+            "label": "Recognized license",
+            "description": "GitHub reports a recognized SPDX license.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "group": "documentation",
+            "label": "Root README",
+            "description": "A root README is present in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "group": "verification",
+            "label": "Test evidence",
+            "description": "A conventional test path or test filename is present.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "group": "verification",
+            "label": "Latest automation passed",
+            "description": "The latest completed GitHub Actions run succeeded.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "security",
+            "group": "security",
+            "label": "Security policy",
+            "description": "A root SECURITY.md file is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "group": "release",
+            "label": "Version marker",
+            "description": "At least one GitHub release or Git tag exists.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "group": "technocore",
+            "label": "Technocore evidence path",
+            "description": "The catalogued protocol-evidence path exists in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "recent",
+            "group": "maintenance",
+            "label": "Recent activity",
+            "description": "The repository was pushed within the previous 180 days.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          }
+        ]
+      }
+    },
+    {
+      "repo": "noncesense67-spec/technocore-ts",
+      "category": "clients",
+      "summary": "TypeScript SDK and MCP server with signed protocol handling, nonce management, agent tooling, and public protocol tests.",
+      "platforms": [
+        "node",
+        "typescript"
+      ],
+      "tags": [
+        "agent",
+        "mcp",
+        "sdk",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "src/protocol/protocol.test.ts"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "Apache-2.0",
+        "pushed_at": "2026-08-25T01:57:20Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "evidence_paths": {
+          "license": "LICENSE",
+          "readme": "README.md",
+          "tests": "src/agent/autopilot.test.ts",
+          "security": null,
+          "protocol": "src/protocol/protocol.test.ts"
+        },
+        "automation": {
+          "present": true,
+          "conclusion": "success",
+          "url": "https://github.com/noncesense67-spec/technocore-ts/actions/runs/32980662176"
         },
         "version": {
           "release": null,
@@ -966,6 +1928,167 @@
       }
     },
     {
+      "repo": "Seqo01/technocore-signed-agent-bridge",
+      "category": "clients",
+      "summary": "Trusted-local TypeScript bridge for signed mailboxes, Ed25519 identities, durable nonces, contacts, and capability rooms.",
+      "platforms": [
+        "node",
+        "typescript"
+      ],
+      "tags": [
+        "bridge",
+        "mailbox",
+        "security",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "tests/protocol.test.ts"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "Apache-2.0",
+        "pushed_at": "2026-08-24T21:21:19Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": true,
+          "protocol_evidence": true
+        },
+        "evidence_paths": {
+          "license": "LICENSE",
+          "readme": "README.md",
+          "tests": "tests/bridge.test.ts",
+          "security": "SECURITY.md",
+          "protocol": "tests/protocol.test.ts"
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "release_url": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "coverage": {
+        "percentage": 80,
+        "label": "strong",
+        "present": 8,
+        "observed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "id": "accessible",
+            "group": "availability",
+            "label": "Repository accessible",
+            "description": "GitHub returned current repository metadata.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "not_archived",
+            "group": "maintenance",
+            "label": "Repository active",
+            "description": "GitHub does not mark the repository as archived.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "group": "documentation",
+            "label": "Recognized license",
+            "description": "GitHub reports a recognized SPDX license.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "group": "documentation",
+            "label": "Root README",
+            "description": "A root README is present in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "group": "verification",
+            "label": "Test evidence",
+            "description": "A conventional test path or test filename is present.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "group": "verification",
+            "label": "Latest automation passed",
+            "description": "The latest completed GitHub Actions run succeeded.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "group": "security",
+            "label": "Security policy",
+            "description": "A root SECURITY.md file is present.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "version",
+            "group": "release",
+            "label": "Version marker",
+            "description": "At least one GitHub release or Git tag exists.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "group": "technocore",
+            "label": "Technocore evidence path",
+            "description": "The catalogued protocol-evidence path exists in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "recent",
+            "group": "maintenance",
+            "label": "Recent activity",
+            "description": "The repository was pushed within the previous 180 days.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          }
+        ]
+      }
+    },
+    {
       "repo": "spacerug/technocore-agent-dashboard",
       "category": "applications",
       "summary": "Windows-oriented dashboard for identity management, signed messages, scheduling, and evidence.",
@@ -985,7 +2108,7 @@
         "error": null,
         "archived": false,
         "license": "MIT",
-        "pushed_at": "2026-08-26T14:05:39Z",
+        "pushed_at": "2026-08-26T17:28:43Z",
         "default_branch": "main",
         "stars": 1,
         "forks": 0,
@@ -1285,6 +2408,488 @@
       }
     },
     {
+      "repo": "UfukNode/technocore-did-tool",
+      "category": "applications",
+      "summary": "Browser interface for creating a local DID, preparing signed Technocore records, and organizing public contribution evidence.",
+      "platforms": [
+        "node",
+        "web"
+      ],
+      "tags": [
+        "did",
+        "identity",
+        "onboarding",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "test/technocore.test.js"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-25T21:26:35Z",
+        "default_branch": "main",
+        "stars": 23,
+        "forks": 26,
+        "files": {
+          "readme": true,
+          "tests": true,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "evidence_paths": {
+          "license": "LICENSE",
+          "readme": "README.md",
+          "tests": "test/technocore.test.js",
+          "security": null,
+          "protocol": "test/technocore.test.js"
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "release_url": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "coverage": {
+        "percentage": 70,
+        "label": "strong",
+        "present": 7,
+        "observed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "id": "accessible",
+            "group": "availability",
+            "label": "Repository accessible",
+            "description": "GitHub returned current repository metadata.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "not_archived",
+            "group": "maintenance",
+            "label": "Repository active",
+            "description": "GitHub does not mark the repository as archived.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "group": "documentation",
+            "label": "Recognized license",
+            "description": "GitHub reports a recognized SPDX license.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "group": "documentation",
+            "label": "Root README",
+            "description": "A root README is present in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "group": "verification",
+            "label": "Test evidence",
+            "description": "A conventional test path or test filename is present.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "ci",
+            "group": "verification",
+            "label": "Latest automation passed",
+            "description": "The latest completed GitHub Actions run succeeded.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "group": "security",
+            "label": "Security policy",
+            "description": "A root SECURITY.md file is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "group": "release",
+            "label": "Version marker",
+            "description": "At least one GitHub release or Git tag exists.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "group": "technocore",
+            "label": "Technocore evidence path",
+            "description": "The catalogued protocol-evidence path exists in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "recent",
+            "group": "maintenance",
+            "label": "Recent activity",
+            "description": "The repository was pushed within the previous 180 days.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          }
+        ]
+      }
+    },
+    {
+      "repo": "Virmage/technocore-client",
+      "category": "clients",
+      "summary": "Dependency-free Node client for Ed25519 DID identities, swept-text signatures, room operations, and durable notes.",
+      "platforms": [
+        "node"
+      ],
+      "tags": [
+        "client",
+        "did",
+        "notes",
+        "signing"
+      ],
+      "evidence": {
+        "protocol_path": "technocore.mjs"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "Apache-2.0",
+        "pushed_at": "2026-08-26T07:02:16Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": false,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "evidence_paths": {
+          "license": "LICENSE",
+          "readme": "README.md",
+          "tests": null,
+          "security": null,
+          "protocol": "technocore.mjs"
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "release_url": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "coverage": {
+        "percentage": 60,
+        "label": "partial",
+        "present": 6,
+        "observed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "id": "accessible",
+            "group": "availability",
+            "label": "Repository accessible",
+            "description": "GitHub returned current repository metadata.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "not_archived",
+            "group": "maintenance",
+            "label": "Repository active",
+            "description": "GitHub does not mark the repository as archived.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "group": "documentation",
+            "label": "Recognized license",
+            "description": "GitHub reports a recognized SPDX license.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "group": "documentation",
+            "label": "Root README",
+            "description": "A root README is present in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "group": "verification",
+            "label": "Test evidence",
+            "description": "A conventional test path or test filename is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "ci",
+            "group": "verification",
+            "label": "Latest automation passed",
+            "description": "The latest completed GitHub Actions run succeeded.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "group": "security",
+            "label": "Security policy",
+            "description": "A root SECURITY.md file is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "group": "release",
+            "label": "Version marker",
+            "description": "At least one GitHub release or Git tag exists.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "group": "technocore",
+            "label": "Technocore evidence path",
+            "description": "The catalogued protocol-evidence path exists in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "recent",
+            "group": "maintenance",
+            "label": "Recent activity",
+            "description": "The repository was pushed within the previous 180 days.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          }
+        ]
+      }
+    },
+    {
+      "repo": "Xelp66/technocore-safelens",
+      "category": "verification",
+      "summary": "Read-only web inspector that separates signed messages and flags links, wallet requests, commands, and prompt-injection language.",
+      "platforms": [
+        "typescript",
+        "web"
+      ],
+      "tags": [
+        "monitoring",
+        "prompt-injection",
+        "read-only",
+        "safety"
+      ],
+      "evidence": {
+        "protocol_path": "src/app/api/room/route.ts"
+      },
+      "observation": {
+        "available": true,
+        "error": null,
+        "archived": false,
+        "license": "MIT",
+        "pushed_at": "2026-08-25T21:43:21Z",
+        "default_branch": "main",
+        "stars": 0,
+        "forks": 0,
+        "files": {
+          "readme": true,
+          "tests": false,
+          "security": false,
+          "protocol_evidence": true
+        },
+        "evidence_paths": {
+          "license": "LICENSE",
+          "readme": "README.md",
+          "tests": null,
+          "security": null,
+          "protocol": "src/app/api/room/route.ts"
+        },
+        "automation": {
+          "present": false,
+          "conclusion": null,
+          "url": null
+        },
+        "version": {
+          "release": null,
+          "release_url": null,
+          "tag": null
+        },
+        "warnings": []
+      },
+      "coverage": {
+        "percentage": 60,
+        "label": "partial",
+        "present": 6,
+        "observed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "id": "accessible",
+            "group": "availability",
+            "label": "Repository accessible",
+            "description": "GitHub returned current repository metadata.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "not_archived",
+            "group": "maintenance",
+            "label": "Repository active",
+            "description": "GitHub does not mark the repository as archived.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "license",
+            "group": "documentation",
+            "label": "Recognized license",
+            "description": "GitHub reports a recognized SPDX license.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "readme",
+            "group": "documentation",
+            "label": "Root README",
+            "description": "A root README is present in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "tests",
+            "group": "verification",
+            "label": "Test evidence",
+            "description": "A conventional test path or test filename is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "ci",
+            "group": "verification",
+            "label": "Latest automation passed",
+            "description": "The latest completed GitHub Actions run succeeded.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "security",
+            "group": "security",
+            "label": "Security policy",
+            "description": "A root SECURITY.md file is present.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "version",
+            "group": "release",
+            "label": "Version marker",
+            "description": "At least one GitHub release or Git tag exists.",
+            "points": 10,
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
+          },
+          {
+            "id": "protocol",
+            "group": "technocore",
+            "label": "Technocore evidence path",
+            "description": "The catalogued protocol-evidence path exists in the repository tree.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          },
+          {
+            "id": "recent",
+            "group": "maintenance",
+            "label": "Recent activity",
+            "description": "The repository was pushed within the previous 180 days.",
+            "points": 10,
+            "state": "present",
+            "passed": true,
+            "awarded": 10
+          }
+        ]
+      }
+    },
+    {
       "repo": "xingharia/technocore-testkit",
       "category": "testing",
       "summary": "TypeScript test utilities and an in-memory mock server for signed client traffic.",
@@ -1470,8 +3075,8 @@
         "license": "MIT",
         "pushed_at": "2026-08-24T14:27:34Z",
         "default_branch": "main",
-        "stars": 99,
-        "forks": 88,
+        "stars": 103,
+        "forks": 91,
         "files": {
           "readme": true,
           "tests": false,
