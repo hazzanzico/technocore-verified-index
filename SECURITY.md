@@ -8,7 +8,7 @@ HTML, validates repository identifiers and URLs, and never treats external text
 as instructions.
 
 The refresher does not clone repositories or execute their workflows, packages,
-installers, scripts, tests, or examples. A passing score is therefore not a
+installers, scripts, tests, or examples. Complete evidence coverage is therefore not a
 malware scan, dependency audit, signature audit, or statement that a project is
 safe to run.
 

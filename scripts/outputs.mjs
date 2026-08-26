@@ -13,7 +13,7 @@ import {
   SITE_PATH,
 } from "./paths.mjs";
 
-export async function writeOutputs(report) {
+export async function writeOutputs(report, historyReports = []) {
   await Promise.all([
     mkdir(dirname(REPORT_PATH), { recursive: true }),
     mkdir(dirname(SITE_PATH), { recursive: true }),
@@ -22,6 +22,6 @@ export async function writeOutputs(report) {
     writeFile(REPORT_PATH, serializeReport(report), "utf8"),
     writeFile(REPORT_MARKDOWN_PATH, renderDetailedReport(report), "utf8"),
     writeFile(README_PATH, renderReadme(report), "utf8"),
-    writeFile(SITE_PATH, renderHtml(report), "utf8"),
+    writeFile(SITE_PATH, renderHtml(report, historyReports), "utf8"),
   ]);
 }

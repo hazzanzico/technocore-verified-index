@@ -1,15 +1,18 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-08-26T10:03:34.320Z. These are observable
-repository-readiness signals, not security or protocol certifications. See
+Generated 2026-08-26T14:45:33.862Z using methodology 2.0.0.
+These results describe observable evidence coverage, not project quality,
+security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
 
-## [0xWarg2/technocore-kit](https://github.com/0xWarg2/technocore-kit) — B (75/100)
+## [0xWarg2/technocore-kit](https://github.com/0xWarg2/technocore-kit) — Strong (80%)
 
 TypeScript client, CLI, and MCP integration for Technocore signed and unsigned operations.
 
 - Category: Clients and SDKs
 - Platforms: node, typescript
+- Evidence present: 8/10
+- Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
 - Last push: 2026-08-24T21:18:32Z
@@ -18,25 +21,27 @@ TypeScript client, CLI, and MCP integration for Technocore signed and unsigned o
 - Latest tag: v0.1.3
 - Observation warnings: none
 
-| Check | Result | Points |
+| Observable signal | State | Coverage share |
 |---|---|---:|
-| Repository accessible | pass | 15/15 |
-| Not archived | pass | 10/10 |
-| Recognized license | pass | 10/10 |
-| Root README | pass | 10/10 |
-| Test evidence | pass | 10/10 |
-| Latest automation passed | not observed | 0/15 |
-| Root security policy | not observed | 0/10 |
-| Release or tag | pass | 10/10 |
-| Protocol evidence path | pass | 5/5 |
-| Pushed within 180 days | pass | 5/5 |
+| [Repository accessible](https://github.com/0xWarg2/technocore-kit) | present | 10% |
+| [Repository active](https://github.com/0xWarg2/technocore-kit) | present | 10% |
+| [Recognized license](https://github.com/0xWarg2/technocore-kit/blob/main/LICENSE) | present | 10% |
+| [Root README](https://github.com/0xWarg2/technocore-kit/blob/main/README.md) | present | 10% |
+| [Test evidence](https://github.com/0xWarg2/technocore-kit/blob/main/test/announce.test.ts) | present | 10% |
+| Latest automation passed | missing | 0% |
+| Security policy | missing | 0% |
+| [Version marker](https://github.com/0xWarg2/technocore-kit/releases/tag/v0.1.3) | present | 10% |
+| [Technocore evidence path](https://github.com/0xWarg2/technocore-kit/blob/main/test/protocol.test.ts) | present | 10% |
+| [Recent activity](https://github.com/0xWarg2/technocore-kit/commits/main) | present | 10% |
 
-## [bdunn77/technocore-http-conformance](https://github.com/bdunn77/technocore-http-conformance) — B (75/100)
+## [bdunn77/technocore-http-conformance](https://github.com/bdunn77/technocore-http-conformance) — Strong (80%)
 
 HTTP conformance laboratory with synthetic and explicitly opt-in deployed test profiles.
 
 - Category: Testing
 - Platforms: python
+- Evidence present: 8/10
+- Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
 - Last push: 2026-08-25T00:29:32Z
@@ -45,25 +50,27 @@ HTTP conformance laboratory with synthetic and explicitly opt-in deployed test p
 - Latest tag: not observed
 - Observation warnings: none
 
-| Check | Result | Points |
+| Observable signal | State | Coverage share |
 |---|---|---:|
-| Repository accessible | pass | 15/15 |
-| Not archived | pass | 10/10 |
-| Recognized license | pass | 10/10 |
-| Root README | pass | 10/10 |
-| Test evidence | pass | 10/10 |
-| Latest automation passed | not observed | 0/15 |
-| Root security policy | pass | 10/10 |
-| Release or tag | not observed | 0/10 |
-| Protocol evidence path | pass | 5/5 |
-| Pushed within 180 days | pass | 5/5 |
+| [Repository accessible](https://github.com/bdunn77/technocore-http-conformance) | present | 10% |
+| [Repository active](https://github.com/bdunn77/technocore-http-conformance) | present | 10% |
+| [Recognized license](https://github.com/bdunn77/technocore-http-conformance/blob/main/LICENSE) | present | 10% |
+| [Root README](https://github.com/bdunn77/technocore-http-conformance/blob/main/README.md) | present | 10% |
+| [Test evidence](https://github.com/bdunn77/technocore-http-conformance/blob/main/tests/test_lab.py) | present | 10% |
+| Latest automation passed | missing | 0% |
+| [Security policy](https://github.com/bdunn77/technocore-http-conformance/blob/main/SECURITY.md) | present | 10% |
+| Version marker | missing | 0% |
+| [Technocore evidence path](https://github.com/bdunn77/technocore-http-conformance/blob/main/tests/test_lab.py) | present | 10% |
+| [Recent activity](https://github.com/bdunn77/technocore-http-conformance/commits/main) | present | 10% |
 
-## [bunnyyxtan/technocore-archive](https://github.com/bunnyyxtan/technocore-archive) — B (70/100)
+## [bunnyyxtan/technocore-archive](https://github.com/bunnyyxtan/technocore-archive) — Strong (70%)
 
 Tamper-evident scheduled room snapshots with a public archive and DID-oriented views.
 
 - Category: Monitoring
 - Platforms: github-actions
+- Evidence present: 7/10
+- Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
 - Last push: 2026-08-26T09:31:49Z
@@ -72,25 +79,27 @@ Tamper-evident scheduled room snapshots with a public archive and DID-oriented v
 - Latest tag: not observed
 - Observation warnings: none
 
-| Check | Result | Points |
+| Observable signal | State | Coverage share |
 |---|---|---:|
-| Repository accessible | pass | 15/15 |
-| Not archived | pass | 10/10 |
-| Recognized license | pass | 10/10 |
-| Root README | pass | 10/10 |
-| Test evidence | not observed | 0/10 |
-| Latest automation passed | pass | 15/15 |
-| Root security policy | not observed | 0/10 |
-| Release or tag | not observed | 0/10 |
-| Protocol evidence path | pass | 5/5 |
-| Pushed within 180 days | pass | 5/5 |
+| [Repository accessible](https://github.com/bunnyyxtan/technocore-archive) | present | 10% |
+| [Repository active](https://github.com/bunnyyxtan/technocore-archive) | present | 10% |
+| [Recognized license](https://github.com/bunnyyxtan/technocore-archive/blob/main/LICENSE) | present | 10% |
+| [Root README](https://github.com/bunnyyxtan/technocore-archive/blob/main/README.md) | present | 10% |
+| Test evidence | missing | 0% |
+| [Latest automation passed](https://github.com/bunnyyxtan/technocore-archive/actions/runs/32953491811) | present | 10% |
+| Security policy | missing | 0% |
+| Version marker | missing | 0% |
+| [Technocore evidence path](https://github.com/bunnyyxtan/technocore-archive/blob/main/test.mjs) | present | 10% |
+| [Recent activity](https://github.com/bunnyyxtan/technocore-archive/commits/main) | present | 10% |
 
-## [hazzanzico/technocore-signed-action](https://github.com/hazzanzico/technocore-signed-action) — A (100/100)
+## [hazzanzico/technocore-signed-action](https://github.com/hazzanzico/technocore-signed-action) — Complete (100%)
 
 GitHub Action for locally signed CI events, safe write reconciliation, and portable receipts.
 
 - Category: Automation
 - Platforms: github-actions, node
+- Evidence present: 10/10
+- Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
 - Last push: 2026-08-26T08:32:09Z
@@ -98,53 +107,58 @@ GitHub Action for locally signed CI events, safe write reconciliation, and porta
 - Latest release: v0.2.0
 - Latest tag: v0.2.0
 - Observation warnings: none
+- Ownership disclosure: this repository is owned by the index maintainer.
 
-| Check | Result | Points |
+| Observable signal | State | Coverage share |
 |---|---|---:|
-| Repository accessible | pass | 15/15 |
-| Not archived | pass | 10/10 |
-| Recognized license | pass | 10/10 |
-| Root README | pass | 10/10 |
-| Test evidence | pass | 10/10 |
-| Latest automation passed | pass | 15/15 |
-| Root security policy | pass | 10/10 |
-| Release or tag | pass | 10/10 |
-| Protocol evidence path | pass | 5/5 |
-| Pushed within 180 days | pass | 5/5 |
+| [Repository accessible](https://github.com/hazzanzico/technocore-signed-action) | present | 10% |
+| [Repository active](https://github.com/hazzanzico/technocore-signed-action) | present | 10% |
+| [Recognized license](https://github.com/hazzanzico/technocore-signed-action/blob/main/LICENSE) | present | 10% |
+| [Root README](https://github.com/hazzanzico/technocore-signed-action/blob/main/README.md) | present | 10% |
+| [Test evidence](https://github.com/hazzanzico/technocore-signed-action/blob/main/test/action.test.js) | present | 10% |
+| [Latest automation passed](https://github.com/hazzanzico/technocore-signed-action/actions/runs/32948251361) | present | 10% |
+| [Security policy](https://github.com/hazzanzico/technocore-signed-action/blob/main/SECURITY.md) | present | 10% |
+| [Version marker](https://github.com/hazzanzico/technocore-signed-action/releases/tag/v0.2.0) | present | 10% |
+| [Technocore evidence path](https://github.com/hazzanzico/technocore-signed-action/blob/main/test/identity.test.js) | present | 10% |
+| [Recent activity](https://github.com/hazzanzico/technocore-signed-action/commits/main) | present | 10% |
 
-## [loopjockey/flopagent](https://github.com/loopjockey/flopagent) — B (80/100)
+## [loopjockey/flopagent](https://github.com/loopjockey/flopagent) — Strong (80%)
 
 Python client with signed writes, portable receipts, discovery helpers, and traffic filtering.
 
 - Category: Clients and SDKs
 - Platforms: python
+- Evidence present: 8/10
+- Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-08-26T08:37:54Z
-- Latest completed automation: [success](https://github.com/loopjockey/flopagent/actions/runs/32948749199)
+- Last push: 2026-08-26T12:40:20Z
+- Latest completed automation: [success](https://github.com/loopjockey/flopagent/actions/runs/32969822042)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
 
-| Check | Result | Points |
+| Observable signal | State | Coverage share |
 |---|---|---:|
-| Repository accessible | pass | 15/15 |
-| Not archived | pass | 10/10 |
-| Recognized license | pass | 10/10 |
-| Root README | pass | 10/10 |
-| Test evidence | pass | 10/10 |
-| Latest automation passed | pass | 15/15 |
-| Root security policy | not observed | 0/10 |
-| Release or tag | not observed | 0/10 |
-| Protocol evidence path | pass | 5/5 |
-| Pushed within 180 days | pass | 5/5 |
+| [Repository accessible](https://github.com/loopjockey/flopagent) | present | 10% |
+| [Repository active](https://github.com/loopjockey/flopagent) | present | 10% |
+| [Recognized license](https://github.com/loopjockey/flopagent/blob/main/LICENSE) | present | 10% |
+| [Root README](https://github.com/loopjockey/flopagent/blob/main/README.md) | present | 10% |
+| [Test evidence](https://github.com/loopjockey/flopagent/blob/main/tests/__init__.py) | present | 10% |
+| [Latest automation passed](https://github.com/loopjockey/flopagent/actions/runs/32969822042) | present | 10% |
+| Security policy | missing | 0% |
+| Version marker | missing | 0% |
+| [Technocore evidence path](https://github.com/loopjockey/flopagent/blob/main/tests/test_flopagent.py) | present | 10% |
+| [Recent activity](https://github.com/loopjockey/flopagent/commits/main) | present | 10% |
 
-## [POLYHINTPROJECT/proofline](https://github.com/POLYHINTPROJECT/proofline) — C (65/100)
+## [POLYHINTPROJECT/proofline](https://github.com/POLYHINTPROJECT/proofline) — Strong (70%)
 
 Web and command-line verification for portable Technocore evidence bundles.
 
 - Category: Identity and verification
 - Platforms: web, cli
+- Evidence present: 7/10
+- Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
 - Last push: 2026-08-25T16:48:18Z
@@ -153,52 +167,56 @@ Web and command-line verification for portable Technocore evidence bundles.
 - Latest tag: not observed
 - Observation warnings: none
 
-| Check | Result | Points |
+| Observable signal | State | Coverage share |
 |---|---|---:|
-| Repository accessible | pass | 15/15 |
-| Not archived | pass | 10/10 |
-| Recognized license | pass | 10/10 |
-| Root README | pass | 10/10 |
-| Test evidence | pass | 10/10 |
-| Latest automation passed | not observed | 0/15 |
-| Root security policy | not observed | 0/10 |
-| Release or tag | not observed | 0/10 |
-| Protocol evidence path | pass | 5/5 |
-| Pushed within 180 days | pass | 5/5 |
+| [Repository accessible](https://github.com/POLYHINTPROJECT/proofline) | present | 10% |
+| [Repository active](https://github.com/POLYHINTPROJECT/proofline) | present | 10% |
+| [Recognized license](https://github.com/POLYHINTPROJECT/proofline/blob/main/LICENSE) | present | 10% |
+| [Root README](https://github.com/POLYHINTPROJECT/proofline/blob/main/README.md) | present | 10% |
+| [Test evidence](https://github.com/POLYHINTPROJECT/proofline/blob/main/tests/didkey.test.ts) | present | 10% |
+| Latest automation passed | missing | 0% |
+| Security policy | missing | 0% |
+| Version marker | missing | 0% |
+| [Technocore evidence path](https://github.com/POLYHINTPROJECT/proofline/blob/main/tests/fixtures/cross-vectors.json) | present | 10% |
+| [Recent activity](https://github.com/POLYHINTPROJECT/proofline/commits/main) | present | 10% |
 
-## [spacerug/technocore-agent-dashboard](https://github.com/spacerug/technocore-agent-dashboard) — C (65/100)
+## [spacerug/technocore-agent-dashboard](https://github.com/spacerug/technocore-agent-dashboard) — Strong (70%)
 
 Windows-oriented dashboard for identity management, signed messages, scheduling, and evidence.
 
 - Category: Applications
 - Platforms: windows
+- Evidence present: 7/10
+- Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-08-25T17:21:48Z
+- Last push: 2026-08-26T14:05:39Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
 
-| Check | Result | Points |
+| Observable signal | State | Coverage share |
 |---|---|---:|
-| Repository accessible | pass | 15/15 |
-| Not archived | pass | 10/10 |
-| Recognized license | pass | 10/10 |
-| Root README | pass | 10/10 |
-| Test evidence | pass | 10/10 |
-| Latest automation passed | not observed | 0/15 |
-| Root security policy | not observed | 0/10 |
-| Release or tag | not observed | 0/10 |
-| Protocol evidence path | pass | 5/5 |
-| Pushed within 180 days | pass | 5/5 |
+| [Repository accessible](https://github.com/spacerug/technocore-agent-dashboard) | present | 10% |
+| [Repository active](https://github.com/spacerug/technocore-agent-dashboard) | present | 10% |
+| [Recognized license](https://github.com/spacerug/technocore-agent-dashboard/blob/main/LICENSE) | present | 10% |
+| [Root README](https://github.com/spacerug/technocore-agent-dashboard/blob/main/README.md) | present | 10% |
+| [Test evidence](https://github.com/spacerug/technocore-agent-dashboard/blob/main/tests/test_artifact_certificate.py) | present | 10% |
+| Latest automation passed | missing | 0% |
+| Security policy | missing | 0% |
+| Version marker | missing | 0% |
+| [Technocore evidence path](https://github.com/spacerug/technocore-agent-dashboard/blob/main/web/tests/crypto-compat.test.ts) | present | 10% |
+| [Recent activity](https://github.com/spacerug/technocore-agent-dashboard/commits/main) | present | 10% |
 
-## [stupeterwilliams-ui/technocore-sdk](https://github.com/stupeterwilliams-ui/technocore-sdk) — C (65/100)
+## [stupeterwilliams-ui/technocore-sdk](https://github.com/stupeterwilliams-ui/technocore-sdk) — Strong (70%)
 
 Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and nonce handling.
 
 - Category: Clients and SDKs
 - Platforms: python
+- Evidence present: 7/10
+- Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
 - Last push: 2026-08-25T19:01:13Z
@@ -207,25 +225,27 @@ Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and
 - Latest tag: not observed
 - Observation warnings: none
 
-| Check | Result | Points |
+| Observable signal | State | Coverage share |
 |---|---|---:|
-| Repository accessible | pass | 15/15 |
-| Not archived | pass | 10/10 |
-| Recognized license | pass | 10/10 |
-| Root README | pass | 10/10 |
-| Test evidence | pass | 10/10 |
-| Latest automation passed | not observed | 0/15 |
-| Root security policy | not observed | 0/10 |
-| Release or tag | not observed | 0/10 |
-| Protocol evidence path | pass | 5/5 |
-| Pushed within 180 days | pass | 5/5 |
+| [Repository accessible](https://github.com/stupeterwilliams-ui/technocore-sdk) | present | 10% |
+| [Repository active](https://github.com/stupeterwilliams-ui/technocore-sdk) | present | 10% |
+| [Recognized license](https://github.com/stupeterwilliams-ui/technocore-sdk/blob/main/LICENSE) | present | 10% |
+| [Root README](https://github.com/stupeterwilliams-ui/technocore-sdk/blob/main/README.md) | present | 10% |
+| [Test evidence](https://github.com/stupeterwilliams-ui/technocore-sdk/blob/main/tests/test_client.py) | present | 10% |
+| Latest automation passed | missing | 0% |
+| Security policy | missing | 0% |
+| Version marker | missing | 0% |
+| [Technocore evidence path](https://github.com/stupeterwilliams-ui/technocore-sdk/blob/main/vectors/technocore-signer-vectors.json) | present | 10% |
+| [Recent activity](https://github.com/stupeterwilliams-ui/technocore-sdk/commits/main) | present | 10% |
 
-## [xingharia/technocore-testkit](https://github.com/xingharia/technocore-testkit) — C (65/100)
+## [xingharia/technocore-testkit](https://github.com/xingharia/technocore-testkit) — Strong (70%)
 
 TypeScript test utilities and an in-memory mock server for signed client traffic.
 
 - Category: Testing
 - Platforms: node, typescript
+- Evidence present: 7/10
+- Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
 - Last push: 2026-08-25T07:56:53Z
@@ -234,25 +254,27 @@ TypeScript test utilities and an in-memory mock server for signed client traffic
 - Latest tag: not observed
 - Observation warnings: none
 
-| Check | Result | Points |
+| Observable signal | State | Coverage share |
 |---|---|---:|
-| Repository accessible | pass | 15/15 |
-| Not archived | pass | 10/10 |
-| Recognized license | pass | 10/10 |
-| Root README | pass | 10/10 |
-| Test evidence | pass | 10/10 |
-| Latest automation passed | not observed | 0/15 |
-| Root security policy | not observed | 0/10 |
-| Release or tag | not observed | 0/10 |
-| Protocol evidence path | pass | 5/5 |
-| Pushed within 180 days | pass | 5/5 |
+| [Repository accessible](https://github.com/xingharia/technocore-testkit) | present | 10% |
+| [Repository active](https://github.com/xingharia/technocore-testkit) | present | 10% |
+| [Recognized license](https://github.com/xingharia/technocore-testkit/blob/main/LICENSE) | present | 10% |
+| [Root README](https://github.com/xingharia/technocore-testkit/blob/main/README.md) | present | 10% |
+| [Test evidence](https://github.com/xingharia/technocore-testkit/blob/main/test/mockServer.test.ts) | present | 10% |
+| Latest automation passed | missing | 0% |
+| Security policy | missing | 0% |
+| Version marker | missing | 0% |
+| [Technocore evidence path](https://github.com/xingharia/technocore-testkit/blob/main/test/mockServer.test.ts) | present | 10% |
+| [Recent activity](https://github.com/xingharia/technocore-testkit/commits/main) | present | 10% |
 
-## [zunmax/technocore-did-starter](https://github.com/zunmax/technocore-did-starter) — C (55/100)
+## [zunmax/technocore-did-starter](https://github.com/zunmax/technocore-did-starter) — Partial (60%)
 
 Cross-platform Python starter for encrypted DID identities, signed messages, and contribution records.
 
 - Category: Guides
 - Platforms: python, windows, macos, linux
+- Evidence present: 6/10
+- Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
 - Last push: 2026-08-24T14:27:34Z
@@ -261,15 +283,15 @@ Cross-platform Python starter for encrypted DID identities, signed messages, and
 - Latest tag: not observed
 - Observation warnings: none
 
-| Check | Result | Points |
+| Observable signal | State | Coverage share |
 |---|---|---:|
-| Repository accessible | pass | 15/15 |
-| Not archived | pass | 10/10 |
-| Recognized license | pass | 10/10 |
-| Root README | pass | 10/10 |
-| Test evidence | not observed | 0/10 |
-| Latest automation passed | not observed | 0/15 |
-| Root security policy | not observed | 0/10 |
-| Release or tag | not observed | 0/10 |
-| Protocol evidence path | pass | 5/5 |
-| Pushed within 180 days | pass | 5/5 |
+| [Repository accessible](https://github.com/zunmax/technocore-did-starter) | present | 10% |
+| [Repository active](https://github.com/zunmax/technocore-did-starter) | present | 10% |
+| [Recognized license](https://github.com/zunmax/technocore-did-starter/blob/main/LICENSE) | present | 10% |
+| [Root README](https://github.com/zunmax/technocore-did-starter/blob/main/README.md) | present | 10% |
+| Test evidence | missing | 0% |
+| Latest automation passed | missing | 0% |
+| Security policy | missing | 0% |
+| Version marker | missing | 0% |
+| [Technocore evidence path](https://github.com/zunmax/technocore-did-starter/blob/main/technocore_agent.py) | present | 10% |
+| [Recent activity](https://github.com/zunmax/technocore-did-starter/commits/main) | present | 10% |

@@ -1,6 +1,6 @@
 {
   "name": "technocore-verified-index",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Evidence-first, automatically refreshed index of Technocore community projects",
   "type": "module",
@@ -10,7 +10,7 @@
   "scripts": {
     "test": "node --test",
     "test:coverage": "node --test --experimental-test-coverage --test-coverage-lines=95 --test-coverage-branches=85 --test-coverage-functions=100",
-    "check": "node --check src/catalog.mjs && node --check src/github.mjs && node --check src/indexer.mjs && node --check src/render.mjs && node --check src/score.mjs && node --check scripts/archive.mjs && node --check scripts/outputs.mjs && node --check scripts/paths.mjs && node --check scripts/refresh.mjs && node --check scripts/render.mjs && node --check scripts/validate.mjs",
+    "check": "node --check src/catalog.mjs && node --check src/github.mjs && node --check src/history.mjs && node --check src/indexer.mjs && node --check src/render.mjs && node --check src/score.mjs && node --check scripts/archive.mjs && node --check scripts/history.mjs && node --check scripts/outputs.mjs && node --check scripts/paths.mjs && node --check scripts/refresh.mjs && node --check scripts/render.mjs && node --check scripts/validate.mjs && node --check site/app.mjs && node --check site/ui-state.mjs",
     "validate": "node scripts/validate.mjs",
     "render": "node scripts/render.mjs",
     "refresh": "node scripts/refresh.mjs",

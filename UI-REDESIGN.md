@@ -1,6 +1,6 @@
 # UI redesign requirements
 
-Status: agreed scope, implementation pending.
+Status: implemented and verified; publication in progress.
 
 ## Product position
 
@@ -89,6 +89,20 @@ real people use it:
 - Iterate based on observed usability problems.
 - Expand categories and the project catalog after the redesigned foundation is
   stable.
+
+## Verification - 2026-08-26
+
+- All 40 automated tests pass with 98.95% line, 89.39% branch, and 100%
+  function coverage.
+- Exact-width browser checks pass at 320, 375, 768, 1024, and 1440 CSS pixels
+  without horizontal overflow.
+- Search, filters, card/table switching, shareable URL state, evidence details,
+  and two-project comparison pass in headless Chrome.
+- The skip link is the first keyboard target and has a visible focus outline.
+- Reproducible Lighthouse mobile and desktop audits score 100 for performance,
+  accessibility, best practices, and SEO on the local static preview.
+- Real-user and maintainer feedback remains intentionally unclaimed until after
+  publication.
 
 ## Success condition
 

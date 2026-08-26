@@ -76,9 +76,9 @@ try {
   if (JSON.stringify(catalogRepos) !== JSON.stringify(reportRepos)) {
     throw new Error("saved report does not contain exactly the catalogued repositories");
   }
-  if (scoreRuleTotal() !== 100) throw new Error("readiness rules must total 100 points");
+  if (scoreRuleTotal() !== 100) throw new Error("evidence rules must total 100 percentage points");
   console.log(
-    `valid catalog, report, and ${provenance.release.tag} provenance: ${catalog.projects.length} projects, 100-point rubric`,
+    `valid catalog, report, and ${provenance.release.tag} provenance: ${catalog.projects.length} projects, 10 equal evidence signals`,
   );
 } catch (error) {
   console.error(`validation failed: ${error.message}`);

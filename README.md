@@ -6,8 +6,8 @@
 An evidence-first, automatically refreshed index of community projects built
 around [FLOP Labs' Technocore Chat](https://github.com/flop-labs/technocore-chat).
 
-> **Independent community project.** A listing or grade is not FLOP Labs
-> endorsement, a security audit, contribution credit, or airdrop eligibility.
+> **Independent community project.** A listing or evidence result is not FLOP
+> Labs endorsement, a security audit, contribution credit, or airdrop eligibility.
 
 ## Launch provenance
 
@@ -23,46 +23,46 @@ client-returned receipt and its explicit verification limits.
 - The source catalog is structured JSON rather than a hand-maintained link table.
 - A dependency-free verifier reads observable GitHub metadata on a schedule.
 - It never clones, installs, imports, or executes an indexed project's code.
-- Every point is explained in [METHODOLOGY.md](METHODOLOGY.md).
-- JSON, detailed Markdown, and a searchable static site come from one snapshot.
-- The maintainer's own project receives the same rules as every other entry.
+- Every signal is explained in [METHODOLOGY.md](METHODOLOGY.md).
+- JSON, detailed Markdown, history, and a searchable static site come from one snapshot.
+- The maintainer's own project receives the same versioned rules as every other entry.
 
 ## Current index
 
-Generated 2026-08-26T10:03:34.320Z from 10 catalogued projects.
-Projects are ordered by repository name, not score.
+Generated 2026-08-26T14:45:33.862Z from 10 catalogued projects.
+Projects are ordered by repository name, not evidence coverage.
 
-| Project | Purpose | Category | Grade | Readiness | Strong signals | API state |
-|---|---|---|---:|---:|---|---|
-| [0xWarg2/technocore-kit](https://github.com/0xWarg2/technocore-kit) | TypeScript client, CLI, and MCP integration for Technocore signed and unsigned operations. | Clients and SDKs | B | 75/100 | tests, versioned | observed |
-| [bdunn77/technocore-http-conformance](https://github.com/bdunn77/technocore-http-conformance) | HTTP conformance laboratory with synthetic and explicitly opt-in deployed test profiles. | Testing | B | 75/100 | tests, security | observed |
-| [bunnyyxtan/technocore-archive](https://github.com/bunnyyxtan/technocore-archive) | Tamper-evident scheduled room snapshots with a public archive and DID-oriented views. | Monitoring | B | 70/100 | automation | observed |
-| [hazzanzico/technocore-signed-action](https://github.com/hazzanzico/technocore-signed-action) | GitHub Action for locally signed CI events, safe write reconciliation, and portable receipts. | Automation | A | 100/100 | automation, tests, security, versioned | observed |
-| [loopjockey/flopagent](https://github.com/loopjockey/flopagent) | Python client with signed writes, portable receipts, discovery helpers, and traffic filtering. | Clients and SDKs | B | 80/100 | automation, tests | observed |
-| [POLYHINTPROJECT/proofline](https://github.com/POLYHINTPROJECT/proofline) | Web and command-line verification for portable Technocore evidence bundles. | Identity and verification | C | 65/100 | tests | observed |
-| [spacerug/technocore-agent-dashboard](https://github.com/spacerug/technocore-agent-dashboard) | Windows-oriented dashboard for identity management, signed messages, scheduling, and evidence. | Applications | C | 65/100 | tests | observed |
-| [stupeterwilliams-ui/technocore-sdk](https://github.com/stupeterwilliams-ui/technocore-sdk) | Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and nonce handling. | Clients and SDKs | C | 65/100 | tests | observed |
-| [xingharia/technocore-testkit](https://github.com/xingharia/technocore-testkit) | TypeScript test utilities and an in-memory mock server for signed client traffic. | Testing | C | 65/100 | tests | observed |
-| [zunmax/technocore-did-starter](https://github.com/zunmax/technocore-did-starter) | Cross-platform Python starter for encrypted DID identities, signed messages, and contribution records. | Guides | C | 55/100 | limited evidence | observed |
+| Project | Purpose | Category | Coverage label | Evidence coverage | Present signals | API state |
+|---|---|---|---|---:|---|---|
+| [0xWarg2/technocore-kit](https://github.com/0xWarg2/technocore-kit) | TypeScript client, CLI, and MCP integration for Technocore signed and unsigned operations. | Clients and SDKs | Strong | 80% | tests, version, Technocore evidence | observed |
+| [bdunn77/technocore-http-conformance](https://github.com/bdunn77/technocore-http-conformance) | HTTP conformance laboratory with synthetic and explicitly opt-in deployed test profiles. | Testing | Strong | 80% | tests, security, Technocore evidence | observed |
+| [bunnyyxtan/technocore-archive](https://github.com/bunnyyxtan/technocore-archive) | Tamper-evident scheduled room snapshots with a public archive and DID-oriented views. | Monitoring | Strong | 70% | automation, Technocore evidence | observed |
+| [hazzanzico/technocore-signed-action](https://github.com/hazzanzico/technocore-signed-action) | GitHub Action for locally signed CI events, safe write reconciliation, and portable receipts. | Automation | Complete | 100% | tests, automation, security, version, Technocore evidence | observed |
+| [loopjockey/flopagent](https://github.com/loopjockey/flopagent) | Python client with signed writes, portable receipts, discovery helpers, and traffic filtering. | Clients and SDKs | Strong | 80% | tests, automation, Technocore evidence | observed |
+| [POLYHINTPROJECT/proofline](https://github.com/POLYHINTPROJECT/proofline) | Web and command-line verification for portable Technocore evidence bundles. | Identity and verification | Strong | 70% | tests, Technocore evidence | observed |
+| [spacerug/technocore-agent-dashboard](https://github.com/spacerug/technocore-agent-dashboard) | Windows-oriented dashboard for identity management, signed messages, scheduling, and evidence. | Applications | Strong | 70% | tests, Technocore evidence | observed |
+| [stupeterwilliams-ui/technocore-sdk](https://github.com/stupeterwilliams-ui/technocore-sdk) | Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and nonce handling. | Clients and SDKs | Strong | 70% | tests, Technocore evidence | observed |
+| [xingharia/technocore-testkit](https://github.com/xingharia/technocore-testkit) | TypeScript test utilities and an in-memory mock server for signed client traffic. | Testing | Strong | 70% | tests, Technocore evidence | observed |
+| [zunmax/technocore-did-starter](https://github.com/zunmax/technocore-did-starter) | Cross-platform Python starter for encrypted DID identities, signed messages, and contribution records. | Guides | Partial | 60% | Technocore evidence | observed |
 
 Read the [detailed report](reports/latest.md), download the
 [machine-readable snapshot](reports/latest.json), or browse the
 [live searchable index](https://hazzanzico.github.io/technocore-verified-index/).
 
-## Reading the score
+## Reading evidence coverage
 
-The readiness score covers repository accessibility, archive state, license,
-README, tests, latest completed automation, security policy, version markers,
-declared protocol evidence, and recent activity. It does **not** inspect source
-semantics or establish that a project is secure or protocol-correct.
+Methodology v2 uses ten equally weighted observable signals. Each present signal
+contributes ten percentage points. **100% means all ten measured signals were
+found; it does not mean perfect, best, secure, endorsed, or airdrop-eligible.**
 
-| Grade | Score |
-|---|---:|
-| A | 85–100 |
-| B | 70–84 |
-| C | 50–69 |
-| D | 0–49 |
-| U | Unavailable and deliberately unscored |
+| Label | Meaning |
+|---|---|
+| Complete | All 10 signals are present. |
+| Strong | 7–9 signals are present. |
+| Partial | 4–6 signals are present. |
+| Limited | 0–3 signals are present. |
+| Incomplete observation | At least one upstream evidence source was unavailable. |
+| Unavailable | Repository metadata could not be observed. |
 
 ## Reproduce
 
@@ -78,5 +78,6 @@ put a token in the catalog or a command-line URL.
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md), [GOVERNANCE.md](GOVERNANCE.md), and
-[SECURITY.md](SECURITY.md). Descriptions are reviewed by people; observable
-facts and scores are regenerated by code.
+[SECURITY.md](SECURITY.md). Maintainers can propose factual corrections through
+pull requests. Descriptions are reviewed by people; observations are regenerated
+by code.

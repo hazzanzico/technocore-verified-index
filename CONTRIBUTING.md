@@ -16,6 +16,11 @@ Optional `evidence.protocol_path` must be a relative path inside the same
 repository. Optional `evidence.live_record` must be an HTTPS record on
 `technocore.chat`. These fields improve traceability but do not prove safety.
 
+To correct an observation, open a pull request or issue with the repository path
+or GitHub API field that demonstrates the factual change. Coverage is generated
+from the same versioned rules for every project, so generated percentages and
+labels are not edited by hand.
+
 Before opening a pull request:
 
 ```console

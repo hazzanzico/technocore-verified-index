@@ -1,7 +1,7 @@
 # Release provenance
 
-This project records release claims separately from its project-readiness
-scores. A signed Technocore identity proves continuity of the signing key; it
+This project records release claims separately from its observable-evidence
+coverage. A signed Technocore identity proves continuity of the signing key; it
 does not prove a GitHub identity, FLOP Labs endorsement, security, or airdrop
 eligibility.
 

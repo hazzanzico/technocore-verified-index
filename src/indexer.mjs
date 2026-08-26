@@ -1,12 +1,13 @@
 import { GitHubApiError, repositoryApiPath } from "./github.mjs";
-import { scoreObservation } from "./score.mjs";
+import { coverageFromLegacy, labelForCoverage, SCORE_RULES, scoreObservation } from "./score.mjs";
 
 const README_PATTERN = /^readme(?:\.[^/]+)?$/i;
 const TEST_PATTERN = /(^|\/)(?:test|tests|spec|specs)(?:\/|$)|\.(?:test|spec)\.[^/]+$/i;
 const WORKFLOW_PATTERN = /^\.github\/workflows\/[^/]+\.ya?ml$/i;
+const LICENSE_PATTERN = /^(?:licen[cs]e|copying)(?:\.[^/]+)?$/i;
 
 function pathsFromTree(tree) {
-  if (!tree || !Array.isArray(tree.tree)) return [];
+  if (!tree || !Array.isArray(tree.tree)) return null;
   return tree.tree
     .filter((entry) => entry?.type === "blob" && typeof entry.path === "string")
     .map((entry) => entry.path);
@@ -37,12 +38,13 @@ export async function inspectProject(project, client, now = new Date()) {
       default_branch: null,
       stars: null,
       forks: null,
-      files: { readme: false, tests: false, security: false, protocol_evidence: false },
+      files: { readme: null, tests: null, security: null, protocol_evidence: null },
+      evidence_paths: { license: null, readme: null, tests: null, security: null, protocol: null },
       automation: { present: false, conclusion: null, url: null },
       version: { release: null, tag: null },
       warnings: [],
     };
-    return { ...project, observation, readiness: scoreObservation(observation, now) };
+    return { ...project, observation, coverage: scoreObservation(observation, now) };
   }
 
   const branch = encodeURIComponent(metadata.default_branch || "main");
@@ -57,8 +59,10 @@ export async function inspectProject(project, client, now = new Date()) {
     optional(() => client.get(`${base}/releases/latest`, { allow404: true }), "release", warnings),
     optional(() => client.get(`${base}/tags?per_page=1`), "tags", warnings),
   ]);
-  const paths = pathsFromTree(tree);
-  const lowerPaths = new Set(paths.map((path) => path.toLowerCase()));
+  const treePaths = pathsFromTree(tree);
+  if (tree !== null && treePaths === null) warnings.push("tree:invalid_response");
+  const paths = treePaths?.sort((left, right) => left.localeCompare(right)) ?? null;
+  const lowerPaths = new Set((paths ?? []).map((path) => path.toLowerCase()));
   const latestRun = Array.isArray(runs?.workflow_runs) ? runs.workflow_runs[0] : null;
   const protocolPath = project.evidence?.protocol_path;
   const observation = {
@@ -75,23 +79,31 @@ export async function inspectProject(project, client, now = new Date()) {
     stars: Number.isInteger(metadata.stargazers_count) ? metadata.stargazers_count : null,
     forks: Number.isInteger(metadata.forks_count) ? metadata.forks_count : null,
     files: {
-      readme: paths.some((path) => README_PATTERN.test(path)),
-      tests: paths.some((path) => TEST_PATTERN.test(path)),
-      security: lowerPaths.has("security.md"),
-      protocol_evidence: protocolPath ? lowerPaths.has(protocolPath.toLowerCase()) : false,
+      readme: paths === null ? null : paths.some((path) => README_PATTERN.test(path)),
+      tests: paths === null ? null : paths.some((path) => TEST_PATTERN.test(path)),
+      security: paths === null ? null : lowerPaths.has("security.md"),
+      protocol_evidence: paths === null ? null : protocolPath ? lowerPaths.has(protocolPath.toLowerCase()) : false,
+    },
+    evidence_paths: {
+      license: paths?.find((path) => LICENSE_PATTERN.test(path)) ?? null,
+      readme: paths?.find((path) => README_PATTERN.test(path)) ?? null,
+      tests: paths?.find((path) => TEST_PATTERN.test(path)) ?? null,
+      security: paths?.find((path) => path.toLowerCase() === "security.md") ?? null,
+      protocol: paths?.find((path) => protocolPath && path.toLowerCase() === protocolPath.toLowerCase()) ?? null,
     },
     automation: {
-      present: paths.some((path) => WORKFLOW_PATTERN.test(path)),
+      present: paths === null ? null : paths.some((path) => WORKFLOW_PATTERN.test(path)),
       conclusion: typeof latestRun?.conclusion === "string" ? latestRun.conclusion : null,
       url: typeof latestRun?.html_url === "string" ? latestRun.html_url : null,
     },
     version: {
       release: typeof release?.tag_name === "string" ? release.tag_name : null,
+      release_url: typeof release?.html_url === "string" ? release.html_url : null,
       tag: Array.isArray(tags) && typeof tags[0]?.name === "string" ? tags[0].name : null,
     },
     warnings: [...new Set(warnings)].sort(),
   };
-  return { ...project, observation, readiness: scoreObservation(observation, now) };
+  return { ...project, observation, coverage: scoreObservation(observation, now) };
 }
 
 async function mapWithConcurrency(items, limit, worker) {
@@ -123,8 +135,8 @@ export async function buildReport(catalog, client, {
   );
   projects.sort((left, right) => left.repo.localeCompare(right.repo, "en", { sensitivity: "base" }));
   return {
-    schema: "technocore-verified-index-report-v1",
-    methodology_version: "1.0.0",
+    schema: "technocore-verified-index-report-v2",
+    methodology_version: "2.0.0",
     generated_at: now.toISOString(),
     project_count: projects.length,
     projects,
@@ -135,7 +147,7 @@ export function validateReport(report) {
   if (!report || typeof report !== "object" || Array.isArray(report)) {
     throw new Error("report must be an object");
   }
-  if (report.schema !== "technocore-verified-index-report-v1") {
+  if (!["technocore-verified-index-report-v1", "technocore-verified-index-report-v2"].includes(report.schema)) {
     throw new Error("report schema is unsupported");
   }
   if (!Array.isArray(report.projects) || report.project_count !== report.projects.length) {
@@ -144,19 +156,49 @@ export function validateReport(report) {
   if (!Number.isFinite(Date.parse(report.generated_at))) {
     throw new Error("report generated_at must be an ISO timestamp");
   }
-  for (const project of report.projects) {
-    if (typeof project.repo !== "string" || !project.readiness || !project.observation) {
+  const normalizedProjects = report.projects.map((project) => {
+    if (typeof project.repo !== "string" || (!project.coverage && !project.readiness) || !project.observation) {
       throw new Error("report contains an invalid project");
     }
-    const validUnscored = project.readiness.grade === "U" && project.readiness.score === null;
-    const validScore =
-      Number.isInteger(project.readiness.score) &&
-      project.readiness.score >= 0 &&
-      project.readiness.score <= 100 &&
-      project.readiness.grade !== "U";
-    if (!validUnscored && !validScore) {
-      throw new Error(`report contains an invalid score for ${project.repo}`);
+    const coverage = project.coverage ?? coverageFromLegacy(project.readiness);
+    const validUnavailable = coverage.label === "unavailable" && coverage.percentage === null;
+    const validPercentage =
+      Number.isInteger(coverage.percentage) && coverage.percentage >= 0 && coverage.percentage <= 100;
+    if (!validUnavailable && !validPercentage) {
+      throw new Error(`report contains invalid evidence coverage for ${project.repo}`);
     }
-  }
-  return report;
+    if (!Array.isArray(coverage.checks) || coverage.total !== coverage.checks.length) {
+      throw new Error(`report contains inconsistent evidence checks for ${project.repo}`);
+    }
+    const expectedIds = SCORE_RULES.map((rule) => rule.id);
+    const checkIds = coverage.checks.map((check) => check.id);
+    const validChecks = coverage.checks.every((check) =>
+      ["present", "missing", "unavailable"].includes(check.state)
+      && check.passed === (check.state === "present")
+      && check.awarded === (check.state === "present" ? 10 : 0));
+    if (coverage.total !== SCORE_RULES.length
+      || new Set(checkIds).size !== SCORE_RULES.length
+      || expectedIds.some((id) => !checkIds.includes(id))
+      || !validChecks) {
+      throw new Error(`report contains invalid evidence checks for ${project.repo}`);
+    }
+    const present = coverage.checks.filter((check) => check.state === "present").length;
+    const unavailable = coverage.checks.filter((check) => check.state === "unavailable").length;
+    const observed = coverage.total - unavailable;
+    const expectedPercentage = coverage.label === "unavailable" ? null : present * 10;
+    if (coverage.present !== present
+      || coverage.observed !== observed
+      || coverage.percentage !== expectedPercentage
+      || coverage.label !== labelForCoverage(expectedPercentage, unavailable)) {
+      throw new Error(`report contains inconsistent evidence coverage for ${project.repo}`);
+    }
+    const { readiness: _legacyReadiness, ...rest } = project;
+    return { ...rest, coverage };
+  });
+  return {
+    ...report,
+    schema: "technocore-verified-index-report-v2",
+    methodology_version: "2.0.0",
+    projects: normalizedProjects,
+  };
 }

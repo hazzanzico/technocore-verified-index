@@ -1,7 +1,15 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 - 2026-08-26
 
+- Replace the readiness score and letter grades with Methodology 2.0's ten
+  equally weighted Observable Evidence Coverage signals.
+- Add an accessible responsive dashboard with filters, card and table views,
+  evidence details, comparisons, history, and shareable URL state.
+- Add safe links to the exact observed evidence and explicit missing and
+  unavailable states.
+- Add static CSS and JavaScript assets while preserving useful project data
+  when JavaScript is unavailable.
 - Record the client-returned signed Technocore launch receipt with explicit
   rolling-buffer retention limits and a machine-readable provenance file.
 

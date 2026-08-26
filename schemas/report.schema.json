@@ -6,15 +6,15 @@
   "additionalProperties": false,
   "required": ["schema", "methodology_version", "generated_at", "project_count", "projects"],
   "properties": {
-    "schema": { "const": "technocore-verified-index-report-v1" },
-    "methodology_version": { "type": "string" },
+    "schema": { "const": "technocore-verified-index-report-v2" },
+    "methodology_version": { "const": "2.0.0" },
     "generated_at": { "type": "string", "format": "date-time" },
     "project_count": { "type": "integer", "minimum": 0 },
     "projects": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["repo", "category", "summary", "platforms", "tags", "observation", "readiness"],
+        "required": ["repo", "category", "summary", "platforms", "tags", "observation", "coverage"],
         "properties": {
           "repo": { "type": "string" },
           "category": { "type": "string" },
@@ -22,13 +22,28 @@
           "platforms": { "type": "array", "items": { "type": "string" } },
           "tags": { "type": "array", "items": { "type": "string" } },
           "observation": { "type": "object" },
-          "readiness": {
+          "coverage": {
             "type": "object",
-            "required": ["score", "grade", "checks"],
+            "additionalProperties": false,
+            "required": ["percentage", "label", "present", "observed", "total", "checks"],
             "properties": {
-              "score": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
-              "grade": { "enum": ["A", "B", "C", "D", "U"] },
-              "checks": { "type": "array", "minItems": 10, "maxItems": 10 }
+              "percentage": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+              "label": { "enum": ["complete", "strong", "partial", "limited", "incomplete", "unavailable"] },
+              "present": { "type": "integer", "minimum": 0, "maximum": 10 },
+              "observed": { "type": "integer", "minimum": 0, "maximum": 10 },
+              "total": { "const": 10 },
+              "checks": {
+                "type": "array",
+                "minItems": 10,
+                "maxItems": 10,
+                "items": {
+                  "type": "object",
+                  "required": ["id", "group", "label", "description", "points", "state", "passed", "awarded"],
+                  "properties": {
+                    "state": { "enum": ["present", "missing", "unavailable"] }
+                  }
+                }
+              }
             }
           }
         }

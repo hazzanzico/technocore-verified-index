@@ -1,6 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { gradeForScore, SCORE_RULES, scoreObservation } from "../src/score.mjs";
+import {
+  coverageFromLegacy,
+  labelForCoverage,
+  SCORE_RULES,
+  scoreObservation,
+} from "../src/score.mjs";
 
 const NOW = new Date("2026-08-26T12:00:00Z");
 
@@ -13,19 +18,24 @@ function completeObservation(change = {}) {
     files: { readme: true, tests: true, security: true, protocol_evidence: true },
     automation: { conclusion: "success" },
     version: { release: "v1.0.0", tag: "v1.0.0" },
+    warnings: [],
     ...change,
   };
 }
 
-test("the public rubric totals 100 and a complete observation earns it", () => {
-  assert.equal(SCORE_RULES.reduce((sum, rule) => sum + rule.points, 0), 100);
-  assert.deepEqual(scoreObservation(completeObservation(), NOW).score, 100);
+test("ten equal public signals produce complete evidence coverage", () => {
+  assert.equal(SCORE_RULES.length, 10);
+  assert.ok(SCORE_RULES.every((rule) => rule.points === 10));
+  const result = scoreObservation(completeObservation(), NOW);
+  assert.deepEqual(
+    { percentage: result.percentage, label: result.label, present: result.present, observed: result.observed },
+    { percentage: 100, label: "complete", present: 10, observed: 10 },
+  );
 });
 
-test("each absent signal loses only its documented points for an available repository", () => {
+test("each missing signal changes coverage by exactly ten percentage points", () => {
   const result = scoreObservation(
     completeObservation({
-      available: true,
       archived: true,
       license: null,
       pushed_at: "2025-01-01T00:00:00Z",
@@ -35,40 +45,65 @@ test("each absent signal loses only its documented points for an available repos
     }),
     NOW,
   );
-  assert.equal(result.score, 15);
-  assert.equal(result.checks.find((check) => check.id === "accessible").passed, true);
-  assert.ok(result.checks.filter((check) => check.id !== "accessible").every((check) => !check.passed && check.awarded === 0));
+  assert.equal(result.percentage, 10);
+  assert.equal(result.label, "limited");
+  assert.equal(result.checks.find((check) => check.id === "accessible").state, "present");
+  assert.ok(result.checks.filter((check) => check.id !== "accessible").every((check) => check.state === "missing" && check.awarded === 0));
 });
 
-test("an unavailable repository is unscored rather than graded as failing", () => {
-  const result = scoreObservation(completeObservation({ available: false }), NOW);
-  assert.equal(result.score, null);
-  assert.equal(result.grade, "U");
+test("repository and optional-source outages are explicit rather than failures", () => {
+  const unavailable = scoreObservation(completeObservation({ available: false }), NOW);
+  assert.equal(unavailable.percentage, null);
+  assert.equal(unavailable.label, "unavailable");
+  assert.ok(unavailable.checks.every((check) => check.state === "unavailable"));
+
+  const partialObservation = scoreObservation(
+    completeObservation({ warnings: ["tree:timeout", "actions:timeout"] }),
+    NOW,
+  );
+  assert.equal(partialObservation.label, "incomplete");
+  assert.equal(partialObservation.observed, 5);
+  assert.equal(partialObservation.checks.find((check) => check.id === "tests").state, "unavailable");
+  assert.equal(partialObservation.checks.find((check) => check.id === "ci").state, "unavailable");
 });
 
-test("tag-only versioning and recent boundary are accepted", () => {
+test("tag-only versioning and the recent boundary are observable", () => {
   const atBoundary = new Date(NOW.getTime() - 180 * 24 * 60 * 60 * 1000).toISOString();
   const result = scoreObservation(
     completeObservation({ pushed_at: atBoundary, version: { release: null, tag: "initial" } }),
     NOW,
   );
-  assert.equal(result.score, 100);
+  assert.equal(result.percentage, 100);
 });
 
 test("future and invalid push dates are not treated as recent", () => {
-  assert.equal(
-    scoreObservation(completeObservation({ pushed_at: "2027-01-01T00:00:00Z" }), NOW).score,
-    95,
-  );
-  assert.equal(scoreObservation(completeObservation({ pushed_at: "invalid" }), NOW).score, 95);
+  assert.equal(scoreObservation(completeObservation({ pushed_at: "2027-01-01T00:00:00Z" }), NOW).percentage, 90);
+  assert.equal(scoreObservation(completeObservation({ pushed_at: "invalid" }), NOW).percentage, 90);
 });
 
-test("grade boundaries remain stable", () => {
-  assert.equal(gradeForScore(100), "A");
-  assert.equal(gradeForScore(85), "A");
-  assert.equal(gradeForScore(84), "B");
-  assert.equal(gradeForScore(70), "B");
-  assert.equal(gradeForScore(69), "C");
-  assert.equal(gradeForScore(50), "C");
-  assert.equal(gradeForScore(49), "D");
+test("descriptive coverage labels have stable, non-grade boundaries", () => {
+  assert.equal(labelForCoverage(100), "complete");
+  assert.equal(labelForCoverage(90), "strong");
+  assert.equal(labelForCoverage(70), "strong");
+  assert.equal(labelForCoverage(60), "partial");
+  assert.equal(labelForCoverage(40), "partial");
+  assert.equal(labelForCoverage(30), "limited");
+  assert.equal(labelForCoverage(100, 1), "incomplete");
+  assert.equal(labelForCoverage(null), "unavailable");
+});
+
+test("v1 readiness data migrates to equal-signal v2 coverage", () => {
+  const legacy = coverageFromLegacy({
+    score: 75,
+    grade: "B",
+    checks: SCORE_RULES.map((rule, index) => ({ id: rule.id, passed: index < 8 })),
+  });
+  assert.equal(legacy.percentage, 80);
+  assert.equal(legacy.label, "strong");
+  assert.equal(legacy.present, 8);
+
+  const unavailable = coverageFromLegacy({ score: null, grade: "U", checks: [] });
+  assert.equal(unavailable.percentage, null);
+  assert.equal(unavailable.label, "unavailable");
+  assert.ok(unavailable.checks.every((check) => check.state === "unavailable"));
 });
