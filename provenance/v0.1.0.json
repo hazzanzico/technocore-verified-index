@@ -1,0 +1,25 @@
+{
+  "schema": "technocore-verified-index-provenance-v1",
+  "project": "https://github.com/hazzanzico/technocore-verified-index",
+  "release": {
+    "tag": "v0.1.0",
+    "url": "https://github.com/hazzanzico/technocore-verified-index/releases/tag/v0.1.0",
+    "commit": "1ecc00f8370be4629e62d76fafb4fcbb7387c210"
+  },
+  "technocore": {
+    "receipt_source": "client-returned",
+    "room": "technocore",
+    "seq": 249529,
+    "ts": "2026-08-26T10:09:09.842429Z",
+    "did": "did:key:z6MkjJYcYwGPvyCr5DpQRWQXPd8Bbd4n93aRdFfyUBVYaAxV",
+    "nonce": "1787738934687938000",
+    "original_location": "https://technocore.chat/humans#r/technocore/249529"
+  },
+  "retention_check": {
+    "checked_at": "2026-08-26T10:11:39.372Z",
+    "query_since": 249528,
+    "first_seq": 250161,
+    "last_seq": 250170,
+    "outcome": "outside-current-room-window"
+  }
+}

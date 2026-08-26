@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hazzanzico/technocore-verified-index/blob/main/schemas/provenance.schema.json",
+  "title": "Technocore Verified Index provenance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "project", "release", "technocore", "retention_check"],
+  "properties": {
+    "schema": { "const": "technocore-verified-index-provenance-v1" },
+    "project": { "type": "string", "format": "uri" },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tag", "url", "commit"],
+      "properties": {
+        "tag": { "type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "url": { "type": "string", "format": "uri" },
+        "commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" }
+      }
+    },
+    "technocore": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["receipt_source", "room", "seq", "ts", "did", "nonce", "original_location"],
+      "properties": {
+        "receipt_source": { "const": "client-returned" },
+        "room": { "const": "technocore" },
+        "seq": { "type": "integer", "minimum": 1 },
+        "ts": { "type": "string", "format": "date-time" },
+        "did": { "type": "string", "pattern": "^did:key:z6Mk[1-9A-HJ-NP-Za-km-z]+$" },
+        "nonce": { "type": "string", "pattern": "^[0-9]+$" },
+        "original_location": { "type": "string", "format": "uri" }
+      }
+    },
+    "retention_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checked_at", "query_since", "first_seq", "last_seq", "outcome"],
+      "properties": {
+        "checked_at": { "type": "string", "format": "date-time" },
+        "query_since": { "type": "integer", "minimum": 0 },
+        "first_seq": { "type": "integer", "minimum": 1 },
+        "last_seq": { "type": "integer", "minimum": 1 },
+        "outcome": { "const": "outside-current-room-window" }
+      }
+    }
+  }
+}

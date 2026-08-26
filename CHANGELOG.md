@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Record the client-returned signed Technocore launch receipt with explicit
+  rolling-buffer retention limits and a machine-readable provenance file.
+
 ## 0.1.0
 
 - Launch the structured ten-project catalog and objective readiness rubric.

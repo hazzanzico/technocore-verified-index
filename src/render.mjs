@@ -82,6 +82,15 @@ around [FLOP Labs' Technocore Chat](https://github.com/flop-labs/technocore-chat
 > **Independent community project.** A listing or grade is not FLOP Labs
 > endorsement, a security audit, contribution credit, or airdrop eligibility.
 
+## Launch provenance
+
+The local signing client reported that Technocore accepted the v0.1.0 launch
+record as room sequence \`249529\` from
+\`did:key:z6MkjJYcYwGPvyCr5DpQRWQXPd8Bbd4n93aRdFfyUBVYaAxV\`.
+Because rooms are rolling buffers, that sequence was already outside the
+read-back window when checked. See [PROVENANCE.md](PROVENANCE.md) for the
+client-returned receipt and its explicit verification limits.
+
 ## What makes this different
 
 - The source catalog is structured JSON rather than a hand-maintained link table.
