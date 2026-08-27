@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-08-26T20:02:40.801Z using methodology 2.0.0.
+Generated 2026-08-27T15:14:27.183Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
@@ -160,7 +160,7 @@ Offline Node toolkit for encrypted local DID identities, Technocore registration
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-08-26T17:34:09Z
+- Last push: 2026-08-27T07:00:23Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
@@ -277,8 +277,8 @@ Python client with signed writes, portable receipts, discovery helpers, and traf
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-08-26T12:40:20Z
-- Latest completed automation: [success](https://github.com/loopjockey/flopagent/actions/runs/32969822042)
+- Last push: 2026-08-27T12:52:37Z
+- Latest completed automation: [success](https://github.com/loopjockey/flopagent/actions/runs/33073972039)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -290,7 +290,7 @@ Python client with signed writes, portable receipts, discovery helpers, and traf
 | [Recognized license](https://github.com/loopjockey/flopagent/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/loopjockey/flopagent/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/loopjockey/flopagent/blob/main/tests/__init__.py) | present | 10% |
-| [Latest automation passed](https://github.com/loopjockey/flopagent/actions/runs/32969822042) | present | 10% |
+| [Latest automation passed](https://github.com/loopjockey/flopagent/actions/runs/33073972039) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/loopjockey/flopagent/blob/main/tests/test_flopagent.py) | present | 10% |
@@ -364,7 +364,7 @@ Trusted-local TypeScript bridge for signed mailboxes, Ed25519 identities, durabl
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-08-24T21:21:19Z
+- Last push: 2026-08-27T12:32:44Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
@@ -376,7 +376,7 @@ Trusted-local TypeScript bridge for signed mailboxes, Ed25519 identities, durabl
 | [Repository active](https://github.com/Seqo01/technocore-signed-agent-bridge) | present | 10% |
 | [Recognized license](https://github.com/Seqo01/technocore-signed-agent-bridge/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/Seqo01/technocore-signed-agent-bridge/blob/main/README.md) | present | 10% |
-| [Test evidence](https://github.com/Seqo01/technocore-signed-agent-bridge/blob/main/tests/bridge.test.ts) | present | 10% |
+| [Test evidence](https://github.com/Seqo01/technocore-signed-agent-bridge/blob/main/tests/agent-memory-journal.test.ts) | present | 10% |
 | Latest automation passed | missing | 0% |
 | [Security policy](https://github.com/Seqo01/technocore-signed-agent-bridge/blob/main/SECURITY.md) | present | 10% |
 | Version marker | missing | 0% |
@@ -451,7 +451,7 @@ Browser interface for creating a local DID, preparing signed Technocore records,
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-08-25T21:26:35Z
+- Last push: 2026-08-26T22:19:09Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
