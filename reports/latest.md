@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-08-27T15:14:27.183Z using methodology 2.0.0.
+Generated 2026-08-28T16:37:46.549Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
@@ -307,7 +307,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 - License: Apache-2.0
 - Default branch: main
 - Last push: 2026-08-25T01:57:20Z
-- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/32980662176)
+- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33147644190)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -319,7 +319,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 | [Recognized license](https://github.com/noncesense67-spec/technocore-ts/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/noncesense67-spec/technocore-ts/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/agent/autopilot.test.ts) | present | 10% |
-| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/32980662176) | present | 10% |
+| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33147644190) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/protocol/protocol.test.ts) | present | 10% |
@@ -480,7 +480,7 @@ Dependency-free Node client for Ed25519 DID identities, swept-text signatures, r
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-08-26T07:02:16Z
+- Last push: 2026-08-27T18:38:37Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
