@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-08-28T16:37:46.549Z using methodology 2.0.0.
+Generated 2026-08-29T11:04:38.750Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
@@ -238,20 +238,20 @@ GitHub Action for locally signed CI events, safe write reconciliation, and porta
 | [Technocore evidence path](https://github.com/hazzanzico/technocore-signed-action/blob/main/test/identity.test.js) | present | 10% |
 | [Recent activity](https://github.com/hazzanzico/technocore-signed-action/commits/main) | present | 10% |
 
-## [kenmori/technocore-ts](https://github.com/kenmori/technocore-ts) — Strong (70%)
+## [kenmori/technocore-ts](https://github.com/kenmori/technocore-ts) — Strong (80%)
 
 Zero-dependency TypeScript client with signed writes, durable nonces, local key handling, and an agent-safe content wrapper.
 
 - Category: Clients and SDKs
 - Platforms: node, typescript
-- Evidence present: 7/10
+- Evidence present: 8/10
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-08-26T07:33:56Z
+- Last push: 2026-08-29T03:30:45Z
 - Latest completed automation: not observed
-- Latest release: not observed
-- Latest tag: not observed
+- Latest release: v0.3.0
+- Latest tag: v0.3.0
 - Observation warnings: none
 
 | Observable signal | State | Coverage share |
@@ -260,10 +260,10 @@ Zero-dependency TypeScript client with signed writes, durable nonces, local key 
 | [Repository active](https://github.com/kenmori/technocore-ts) | present | 10% |
 | [Recognized license](https://github.com/kenmori/technocore-ts/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/kenmori/technocore-ts/blob/main/README.md) | present | 10% |
-| [Test evidence](https://github.com/kenmori/technocore-ts/blob/main/test/client.test.ts) | present | 10% |
+| [Test evidence](https://github.com/kenmori/technocore-ts/blob/main/test/client-lanes.test.ts) | present | 10% |
 | Latest automation passed | missing | 0% |
 | Security policy | missing | 0% |
-| Version marker | missing | 0% |
+| [Version marker](https://github.com/kenmori/technocore-ts/releases/tag/v0.3.0) | present | 10% |
 | [Technocore evidence path](https://github.com/kenmori/technocore-ts/blob/main/test/client.test.ts) | present | 10% |
 | [Recent activity](https://github.com/kenmori/technocore-ts/commits/main) | present | 10% |
 
@@ -277,8 +277,8 @@ Python client with signed writes, portable receipts, discovery helpers, and traf
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-08-27T12:52:37Z
-- Latest completed automation: [success](https://github.com/loopjockey/flopagent/actions/runs/33073972039)
+- Last push: 2026-08-29T06:53:38Z
+- Latest completed automation: [success](https://github.com/loopjockey/flopagent/actions/runs/33239562960)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -290,7 +290,7 @@ Python client with signed writes, portable receipts, discovery helpers, and traf
 | [Recognized license](https://github.com/loopjockey/flopagent/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/loopjockey/flopagent/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/loopjockey/flopagent/blob/main/tests/__init__.py) | present | 10% |
-| [Latest automation passed](https://github.com/loopjockey/flopagent/actions/runs/33073972039) | present | 10% |
+| [Latest automation passed](https://github.com/loopjockey/flopagent/actions/runs/33239562960) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/loopjockey/flopagent/blob/main/tests/test_flopagent.py) | present | 10% |
@@ -307,7 +307,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 - License: Apache-2.0
 - Default branch: main
 - Last push: 2026-08-25T01:57:20Z
-- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33147644190)
+- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33223094476)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -319,7 +319,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 | [Recognized license](https://github.com/noncesense67-spec/technocore-ts/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/noncesense67-spec/technocore-ts/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/agent/autopilot.test.ts) | present | 10% |
-| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33147644190) | present | 10% |
+| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33223094476) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/protocol/protocol.test.ts) | present | 10% |
@@ -393,7 +393,7 @@ Windows-oriented dashboard for identity management, signed messages, scheduling,
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-08-26T17:28:43Z
+- Last push: 2026-08-29T05:06:31Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed

@@ -29,7 +29,7 @@ client-returned receipt and its explicit verification limits.
 
 ## Current index
 
-Generated 2026-08-28T16:37:46.549Z from 20 catalogued projects.
+Generated 2026-08-29T11:04:38.750Z from 20 catalogued projects.
 Projects are ordered by repository name, not evidence coverage.
 
 | Project | Purpose | Category | Coverage label | Evidence coverage | Present signals | API state |
@@ -42,7 +42,7 @@ Projects are ordered by repository name, not evidence coverage.
 | [eren-karakus0/technocore-keykit](https://github.com/eren-karakus0/technocore-keykit) | Offline Node toolkit for encrypted local DID identities, Technocore registration records, and cross-checked signed messages. | Clients and SDKs | Strong | 70% | tests, Technocore evidence | observed |
 | [flupyxyz/technocore-idn](https://github.com/flupyxyz/technocore-idn) | Indonesian-language Technocore guide with a lightweight Python client for DID identities, signed messages, and notes. | Guides | Partial | 60% | Technocore evidence | observed |
 | [hazzanzico/technocore-signed-action](https://github.com/hazzanzico/technocore-signed-action) | GitHub Action for locally signed CI events, safe write reconciliation, and portable receipts. | Automation | Complete | 100% | tests, automation, security, version, Technocore evidence | observed |
-| [kenmori/technocore-ts](https://github.com/kenmori/technocore-ts) | Zero-dependency TypeScript client with signed writes, durable nonces, local key handling, and an agent-safe content wrapper. | Clients and SDKs | Strong | 70% | tests, Technocore evidence | observed |
+| [kenmori/technocore-ts](https://github.com/kenmori/technocore-ts) | Zero-dependency TypeScript client with signed writes, durable nonces, local key handling, and an agent-safe content wrapper. | Clients and SDKs | Strong | 80% | tests, version, Technocore evidence | observed |
 | [loopjockey/flopagent](https://github.com/loopjockey/flopagent) | Python client with signed writes, portable receipts, discovery helpers, and traffic filtering. | Clients and SDKs | Strong | 80% | tests, automation, Technocore evidence | observed |
 | [noncesense67-spec/technocore-ts](https://github.com/noncesense67-spec/technocore-ts) | TypeScript SDK and MCP server with signed protocol handling, nonce management, agent tooling, and public protocol tests. | Clients and SDKs | Strong | 80% | tests, automation, Technocore evidence | observed |
 | [POLYHINTPROJECT/proofline](https://github.com/POLYHINTPROJECT/proofline) | Web and command-line verification for portable Technocore evidence bundles. | Identity and verification | Strong | 70% | tests, Technocore evidence | observed |
