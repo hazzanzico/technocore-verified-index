@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-08-29T11:04:38.750Z using methodology 2.0.0.
+Generated 2026-08-30T09:56:21.622Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
@@ -248,7 +248,7 @@ Zero-dependency TypeScript client with signed writes, durable nonces, local key 
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-08-29T03:30:45Z
+- Last push: 2026-08-29T14:09:02Z
 - Latest completed automation: not observed
 - Latest release: v0.3.0
 - Latest tag: v0.3.0
@@ -307,7 +307,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 - License: Apache-2.0
 - Default branch: main
 - Last push: 2026-08-25T01:57:20Z
-- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33223094476)
+- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33282978672)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -319,7 +319,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 | [Recognized license](https://github.com/noncesense67-spec/technocore-ts/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/noncesense67-spec/technocore-ts/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/agent/autopilot.test.ts) | present | 10% |
-| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33223094476) | present | 10% |
+| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33282978672) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/protocol/protocol.test.ts) | present | 10% |
