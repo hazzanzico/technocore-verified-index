@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-08-31T10:51:03.304Z using methodology 2.0.0.
+Generated 2026-09-01T09:23:57.641Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
@@ -248,10 +248,10 @@ Zero-dependency TypeScript client with signed writes, durable nonces, local key 
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-08-29T14:09:02Z
+- Last push: 2026-09-01T09:06:19Z
 - Latest completed automation: not observed
-- Latest release: v0.3.0
-- Latest tag: v0.3.0
+- Latest release: v0.4.0
+- Latest tag: v0.4.0
 - Observation warnings: none
 
 | Observable signal | State | Coverage share |
@@ -263,7 +263,7 @@ Zero-dependency TypeScript client with signed writes, durable nonces, local key 
 | [Test evidence](https://github.com/kenmori/technocore-ts/blob/main/test/client-lanes.test.ts) | present | 10% |
 | Latest automation passed | missing | 0% |
 | Security policy | missing | 0% |
-| [Version marker](https://github.com/kenmori/technocore-ts/releases/tag/v0.3.0) | present | 10% |
+| [Version marker](https://github.com/kenmori/technocore-ts/releases/tag/v0.4.0) | present | 10% |
 | [Technocore evidence path](https://github.com/kenmori/technocore-ts/blob/main/test/client.test.ts) | present | 10% |
 | [Recent activity](https://github.com/kenmori/technocore-ts/commits/main) | present | 10% |
 
@@ -277,8 +277,8 @@ Python client with signed writes, portable receipts, discovery helpers, and traf
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-08-29T06:53:38Z
-- Latest completed automation: [success](https://github.com/loopjockey/flopagent/actions/runs/33239562960)
+- Last push: 2026-09-01T07:21:00Z
+- Latest completed automation: [success](https://github.com/loopjockey/flopagent/actions/runs/33481710676)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -290,7 +290,7 @@ Python client with signed writes, portable receipts, discovery helpers, and traf
 | [Recognized license](https://github.com/loopjockey/flopagent/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/loopjockey/flopagent/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/loopjockey/flopagent/blob/main/tests/__init__.py) | present | 10% |
-| [Latest automation passed](https://github.com/loopjockey/flopagent/actions/runs/33239562960) | present | 10% |
+| [Latest automation passed](https://github.com/loopjockey/flopagent/actions/runs/33481710676) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/loopjockey/flopagent/blob/main/tests/test_flopagent.py) | present | 10% |
@@ -306,8 +306,8 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-08-25T01:57:20Z
-- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33344165229)
+- Last push: 2026-09-01T00:34:34Z
+- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33455289847)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -319,7 +319,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 | [Recognized license](https://github.com/noncesense67-spec/technocore-ts/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/noncesense67-spec/technocore-ts/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/agent/autopilot.test.ts) | present | 10% |
-| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33344165229) | present | 10% |
+| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33455289847) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/protocol/protocol.test.ts) | present | 10% |
@@ -441,17 +441,17 @@ Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and
 | [Technocore evidence path](https://github.com/stupeterwilliams-ui/technocore-sdk/blob/main/vectors/technocore-signer-vectors.json) | present | 10% |
 | [Recent activity](https://github.com/stupeterwilliams-ui/technocore-sdk/commits/main) | present | 10% |
 
-## [UfukNode/technocore-did-tool](https://github.com/UfukNode/technocore-did-tool) — Strong (70%)
+## [UfukNode/technocore-did-tool](https://github.com/UfukNode/technocore-did-tool) — Unavailable (unavailable)
 
 Browser interface for creating a local DID, preparing signed Technocore records, and organizing public contribution evidence.
 
 - Category: Applications
 - Platforms: node, web
-- Evidence present: 7/10
-- Evidence evaluated: 10/10
-- License: MIT
-- Default branch: main
-- Last push: 2026-08-26T22:19:09Z
+- Evidence present: 0/10
+- Evidence evaluated: 0/10
+- License: not observed
+- Default branch: not observed
+- Last push: not observed
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
@@ -459,16 +459,16 @@ Browser interface for creating a local DID, preparing signed Technocore records,
 
 | Observable signal | State | Coverage share |
 |---|---|---:|
-| [Repository accessible](https://github.com/UfukNode/technocore-did-tool) | present | 10% |
-| [Repository active](https://github.com/UfukNode/technocore-did-tool) | present | 10% |
-| [Recognized license](https://github.com/UfukNode/technocore-did-tool/blob/main/LICENSE) | present | 10% |
-| [Root README](https://github.com/UfukNode/technocore-did-tool/blob/main/README.md) | present | 10% |
-| [Test evidence](https://github.com/UfukNode/technocore-did-tool/blob/main/test/technocore.test.js) | present | 10% |
-| Latest automation passed | missing | 0% |
-| Security policy | missing | 0% |
-| Version marker | missing | 0% |
-| [Technocore evidence path](https://github.com/UfukNode/technocore-did-tool/blob/main/test/technocore.test.js) | present | 10% |
-| [Recent activity](https://github.com/UfukNode/technocore-did-tool/commits/main) | present | 10% |
+| [Repository accessible](https://github.com/UfukNode/technocore-did-tool) | unavailable | 0% |
+| [Repository active](https://github.com/UfukNode/technocore-did-tool) | unavailable | 0% |
+| Recognized license | unavailable | 0% |
+| Root README | unavailable | 0% |
+| Test evidence | unavailable | 0% |
+| Latest automation passed | unavailable | 0% |
+| Security policy | unavailable | 0% |
+| Version marker | unavailable | 0% |
+| Technocore evidence path | unavailable | 0% |
+| [Recent activity](https://github.com/UfukNode/technocore-did-tool) | unavailable | 0% |
 
 ## [Virmage/technocore-client](https://github.com/Virmage/technocore-client) — Partial (60%)
 

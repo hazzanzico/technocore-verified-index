@@ -29,7 +29,7 @@ client-returned receipt and its explicit verification limits.
 
 ## Current index
 
-Generated 2026-08-31T10:51:03.304Z from 20 catalogued projects.
+Generated 2026-09-01T09:23:57.641Z from 20 catalogued projects.
 Projects are ordered by repository name, not evidence coverage.
 
 | Project | Purpose | Category | Coverage label | Evidence coverage | Present signals | API state |
@@ -49,7 +49,7 @@ Projects are ordered by repository name, not evidence coverage.
 | [Seqo01/technocore-signed-agent-bridge](https://github.com/Seqo01/technocore-signed-agent-bridge) | Trusted-local TypeScript bridge for signed mailboxes, Ed25519 identities, durable nonces, contacts, and capability rooms. | Clients and SDKs | Strong | 80% | tests, security, Technocore evidence | observed |
 | [spacerug/technocore-agent-dashboard](https://github.com/spacerug/technocore-agent-dashboard) | Windows-oriented dashboard for identity management, signed messages, scheduling, and evidence. | Applications | Strong | 70% | tests, Technocore evidence | observed |
 | [stupeterwilliams-ui/technocore-sdk](https://github.com/stupeterwilliams-ui/technocore-sdk) | Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and nonce handling. | Clients and SDKs | Strong | 70% | tests, Technocore evidence | observed |
-| [UfukNode/technocore-did-tool](https://github.com/UfukNode/technocore-did-tool) | Browser interface for creating a local DID, preparing signed Technocore records, and organizing public contribution evidence. | Applications | Strong | 70% | tests, Technocore evidence | observed |
+| [UfukNode/technocore-did-tool](https://github.com/UfukNode/technocore-did-tool) | Browser interface for creating a local DID, preparing signed Technocore records, and organizing public contribution evidence. | Applications | Unavailable | unavailable | limited observed evidence | unavailable |
 | [Virmage/technocore-client](https://github.com/Virmage/technocore-client) | Dependency-free Node client for Ed25519 DID identities, swept-text signatures, room operations, and durable notes. | Clients and SDKs | Partial | 60% | Technocore evidence | observed |
 | [Xelp66/technocore-safelens](https://github.com/Xelp66/technocore-safelens) | Read-only web inspector that separates signed messages and flags links, wallet requests, commands, and prompt-injection language. | Identity and verification | Partial | 60% | Technocore evidence | observed |
 | [xingharia/technocore-testkit](https://github.com/xingharia/technocore-testkit) | TypeScript test utilities and an in-memory mock server for signed client traffic. | Testing | Strong | 70% | tests, Technocore evidence | observed |
