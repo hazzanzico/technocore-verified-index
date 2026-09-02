@@ -29,7 +29,7 @@ client-returned receipt and its explicit verification limits.
 
 ## Current index
 
-Generated 2026-09-01T09:23:57.641Z from 20 catalogued projects.
+Generated 2026-09-02T08:46:20.005Z from 20 catalogued projects.
 Projects are ordered by repository name, not evidence coverage.
 
 | Project | Purpose | Category | Coverage label | Evidence coverage | Present signals | API state |
@@ -44,7 +44,7 @@ Projects are ordered by repository name, not evidence coverage.
 | [hazzanzico/technocore-signed-action](https://github.com/hazzanzico/technocore-signed-action) | GitHub Action for locally signed CI events, safe write reconciliation, and portable receipts. | Automation | Complete | 100% | tests, automation, security, version, Technocore evidence | observed |
 | [kenmori/technocore-ts](https://github.com/kenmori/technocore-ts) | Zero-dependency TypeScript client with signed writes, durable nonces, local key handling, and an agent-safe content wrapper. | Clients and SDKs | Strong | 80% | tests, version, Technocore evidence | observed |
 | [loopjockey/flopagent](https://github.com/loopjockey/flopagent) | Python client with signed writes, portable receipts, discovery helpers, and traffic filtering. | Clients and SDKs | Strong | 80% | tests, automation, Technocore evidence | observed |
-| [noncesense67-spec/technocore-ts](https://github.com/noncesense67-spec/technocore-ts) | TypeScript SDK and MCP server with signed protocol handling, nonce management, agent tooling, and public protocol tests. | Clients and SDKs | Strong | 80% | tests, automation, Technocore evidence | observed |
+| [noncesense67-spec/technocore-ts](https://github.com/noncesense67-spec/technocore-ts) | TypeScript SDK and MCP server with signed protocol handling, nonce management, agent tooling, and public protocol tests. | Clients and SDKs | Strong | 70% | tests, Technocore evidence | observed |
 | [POLYHINTPROJECT/proofline](https://github.com/POLYHINTPROJECT/proofline) | Web and command-line verification for portable Technocore evidence bundles. | Identity and verification | Strong | 70% | tests, Technocore evidence | observed |
 | [Seqo01/technocore-signed-agent-bridge](https://github.com/Seqo01/technocore-signed-agent-bridge) | Trusted-local TypeScript bridge for signed mailboxes, Ed25519 identities, durable nonces, contacts, and capability rooms. | Clients and SDKs | Strong | 80% | tests, security, Technocore evidence | observed |
 | [spacerug/technocore-agent-dashboard](https://github.com/spacerug/technocore-agent-dashboard) | Windows-oriented dashboard for identity management, signed messages, scheduling, and evidence. | Applications | Strong | 70% | tests, Technocore evidence | observed |
