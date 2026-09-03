@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-09-02T08:46:20.005Z using methodology 2.0.0.
+Generated 2026-09-03T08:55:50.426Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
@@ -248,7 +248,7 @@ Zero-dependency TypeScript client with signed writes, durable nonces, local key 
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-09-01T09:06:19Z
+- Last push: 2026-09-02T11:29:26Z
 - Latest completed automation: not observed
 - Latest release: v0.4.0
 - Latest tag: v0.4.0
@@ -296,18 +296,18 @@ Python client with signed writes, portable receipts, discovery helpers, and traf
 | [Technocore evidence path](https://github.com/loopjockey/flopagent/blob/main/tests/test_flopagent.py) | present | 10% |
 | [Recent activity](https://github.com/loopjockey/flopagent/commits/main) | present | 10% |
 
-## [noncesense67-spec/technocore-ts](https://github.com/noncesense67-spec/technocore-ts) — Strong (70%)
+## [noncesense67-spec/technocore-ts](https://github.com/noncesense67-spec/technocore-ts) — Strong (80%)
 
 TypeScript SDK and MCP server with signed protocol handling, nonce management, agent tooling, and public protocol tests.
 
 - Category: Clients and SDKs
 - Platforms: node, typescript
-- Evidence present: 7/10
+- Evidence present: 8/10
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
 - Last push: 2026-09-01T23:44:05Z
-- Latest completed automation: [failure](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33575721181)
+- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33700054565)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -319,7 +319,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 | [Recognized license](https://github.com/noncesense67-spec/technocore-ts/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/noncesense67-spec/technocore-ts/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/agent/autopilot.test.ts) | present | 10% |
-| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33575721181) | missing | 0% |
+| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33700054565) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/protocol/protocol.test.ts) | present | 10% |
@@ -364,7 +364,7 @@ Trusted-local TypeScript bridge for signed mailboxes, Ed25519 identities, durabl
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-08-27T12:32:44Z
+- Last push: 2026-09-02T21:36:42Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
@@ -393,7 +393,7 @@ Windows-oriented dashboard for identity management, signed messages, scheduling,
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-09-01T20:13:39Z
+- Last push: 2026-09-02T23:41:22Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
