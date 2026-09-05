@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-09-04T08:50:34.203Z using methodology 2.0.0.
+Generated 2026-09-05T08:20:54.409Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
@@ -306,8 +306,8 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-09-01T23:44:05Z
-- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33822119483)
+- Last push: 2026-09-04T22:58:33Z
+- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33933335105)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -319,7 +319,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 | [Recognized license](https://github.com/noncesense67-spec/technocore-ts/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/noncesense67-spec/technocore-ts/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/agent/autopilot.test.ts) | present | 10% |
-| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33822119483) | present | 10% |
+| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/33933335105) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/protocol/protocol.test.ts) | present | 10% |
@@ -364,7 +364,7 @@ Trusted-local TypeScript bridge for signed mailboxes, Ed25519 identities, durabl
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-09-03T11:15:47Z
+- Last push: 2026-09-04T21:26:33Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
