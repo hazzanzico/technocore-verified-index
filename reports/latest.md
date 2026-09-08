@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-09-07T09:19:42.494Z using methodology 2.0.0.
+Generated 2026-09-08T08:51:32.557Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
@@ -307,7 +307,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 - License: Apache-2.0
 - Default branch: main
 - Last push: 2026-09-04T22:58:33Z
-- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/34070281727)
+- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/34173782302)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -319,7 +319,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 | [Recognized license](https://github.com/noncesense67-spec/technocore-ts/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/noncesense67-spec/technocore-ts/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/agent/autopilot.test.ts) | present | 10% |
-| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/34070281727) | present | 10% |
+| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/34173782302) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/protocol/protocol.test.ts) | present | 10% |
@@ -393,7 +393,7 @@ Windows-oriented dashboard for identity management, signed messages, scheduling,
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-09-06T18:14:01Z
+- Last push: 2026-09-08T04:32:09Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
@@ -422,7 +422,7 @@ Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-08-25T19:01:13Z
+- Last push: 2026-09-07T18:13:36Z
 - Latest completed automation: not observed
 - Latest release: not observed
 - Latest tag: not observed
