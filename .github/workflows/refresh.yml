@@ -49,10 +49,10 @@ jobs:
           git add README.md reports/latest.json reports/latest.md reports/history site/index.html
           git commit -m "data: refresh verified index"
           git push
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
       - name: Deploy refreshed site
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
