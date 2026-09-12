@@ -1,7 +1,7 @@
 {
   "schema": "technocore-verified-index-report-v2",
   "methodology_version": "2.0.0",
-  "generated_at": "2026-09-12T08:38:03.219Z",
+  "generated_at": "2026-09-10T08:56:33.849Z",
   "project_count": 20,
   "projects": [
     {
@@ -1628,7 +1628,7 @@
         "error": null,
         "archived": false,
         "license": "Apache-2.0",
-        "pushed_at": "2026-09-12T02:05:46Z",
+        "pushed_at": "2026-09-04T22:58:33Z",
         "default_branch": "main",
         "stars": 0,
         "forks": 0,
@@ -1648,7 +1648,7 @@
         "automation": {
           "present": true,
           "conclusion": "success",
-          "url": "https://github.com/noncesense67-spec/technocore-ts/actions/runs/34661807191"
+          "url": "https://github.com/noncesense67-spec/technocore-ts/actions/runs/34421553167"
         },
         "version": {
           "release": null,
@@ -1949,7 +1949,7 @@
         "error": null,
         "archived": false,
         "license": "Apache-2.0",
-        "pushed_at": "2026-09-10T10:14:51Z",
+        "pushed_at": "2026-09-09T11:36:13Z",
         "default_branch": "main",
         "stars": 0,
         "forks": 0,
@@ -2429,9 +2429,9 @@
         "error": null,
         "archived": false,
         "license": "MIT",
-        "pushed_at": "2026-09-11T21:51:30Z",
+        "pushed_at": "2026-08-26T22:19:09Z",
         "default_branch": "main",
-        "stars": 32,
+        "stars": 31,
         "forks": 37,
         "files": {
           "readme": true,
@@ -2447,9 +2447,9 @@
           "protocol": "test/technocore.test.js"
         },
         "automation": {
-          "present": true,
-          "conclusion": "success",
-          "url": "https://github.com/UfukNode/technocore-did-tool/actions/runs/34681657617"
+          "present": false,
+          "conclusion": null,
+          "url": null
         },
         "version": {
           "release": null,
@@ -2459,9 +2459,9 @@
         "warnings": []
       },
       "coverage": {
-        "percentage": 80,
+        "percentage": 70,
         "label": "strong",
-        "present": 8,
+        "present": 7,
         "observed": 10,
         "total": 10,
         "checks": [
@@ -2521,9 +2521,9 @@
             "label": "Latest automation passed",
             "description": "The latest completed GitHub Actions run succeeded.",
             "points": 10,
-            "state": "present",
-            "passed": true,
-            "awarded": 10
+            "state": "missing",
+            "passed": false,
+            "awarded": 0
           },
           {
             "id": "security",
@@ -3075,7 +3075,7 @@
         "license": "MIT",
         "pushed_at": "2026-08-24T14:27:34Z",
         "default_branch": "main",
-        "stars": 129,
+        "stars": 128,
         "forks": 114,
         "files": {
           "readme": true,
