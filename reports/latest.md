@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-09-14T09:51:06.717Z using methodology 2.0.0.
+Generated 2026-09-15T09:24:30.081Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
@@ -306,8 +306,8 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 - Evidence evaluated: 10/10
 - License: Apache-2.0
 - Default branch: main
-- Last push: 2026-09-12T02:05:46Z
-- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/34792987706)
+- Last push: 2026-09-15T02:46:35Z
+- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/34913600847)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -319,7 +319,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 | [Recognized license](https://github.com/noncesense67-spec/technocore-ts/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/noncesense67-spec/technocore-ts/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/agent/autopilot.test.ts) | present | 10% |
-| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/34792987706) | present | 10% |
+| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/34913600847) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/protocol/protocol.test.ts) | present | 10% |
@@ -451,8 +451,8 @@ Browser interface for creating a local DID, preparing signed Technocore records,
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-09-14T06:42:43Z
-- Latest completed automation: [success](https://github.com/UfukNode/technocore-did-tool/actions/runs/34814503619)
+- Last push: 2026-09-15T00:43:03Z
+- Latest completed automation: [success](https://github.com/UfukNode/technocore-did-tool/actions/runs/34932536881)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -464,7 +464,7 @@ Browser interface for creating a local DID, preparing signed Technocore records,
 | [Recognized license](https://github.com/UfukNode/technocore-did-tool/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/UfukNode/technocore-did-tool/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/UfukNode/technocore-did-tool/blob/main/test/technocore.test.js) | present | 10% |
-| [Latest automation passed](https://github.com/UfukNode/technocore-did-tool/actions/runs/34814503619) | present | 10% |
+| [Latest automation passed](https://github.com/UfukNode/technocore-did-tool/actions/runs/34932536881) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/UfukNode/technocore-did-tool/blob/main/test/technocore.test.js) | present | 10% |
