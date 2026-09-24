@@ -29,7 +29,7 @@ client-returned receipt and its explicit verification limits.
 
 ## Current index
 
-Generated 2026-09-23T09:18:07.985Z from 20 catalogued projects.
+Generated 2026-09-24T09:18:01.173Z from 20 catalogued projects.
 Projects are ordered by repository name, not evidence coverage.
 
 | Project | Purpose | Category | Coverage label | Evidence coverage | Present signals | API state |
