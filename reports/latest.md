@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-11-01T10:29:43.918Z using methodology 2.0.0.
+Generated 2026-11-01T11:15:13.623Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
