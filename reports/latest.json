@@ -1,7 +1,7 @@
 {
   "schema": "technocore-verified-index-report-v2",
   "methodology_version": "2.0.0",
-  "generated_at": "2026-11-04T12:06:21.956Z",
+  "generated_at": "2026-11-05T12:18:03.192Z",
   "project_count": 20,
   "projects": [
     {
@@ -1648,7 +1648,7 @@
         "automation": {
           "present": true,
           "conclusion": "success",
-          "url": "https://github.com/noncesense67-spec/technocore-ts/actions/runs/41783715673"
+          "url": "https://github.com/noncesense67-spec/technocore-ts/actions/runs/41981709935"
         },
         "version": {
           "release": null,
@@ -2429,7 +2429,7 @@
         "error": null,
         "archived": false,
         "license": "MIT",
-        "pushed_at": "2026-11-04T02:38:56Z",
+        "pushed_at": "2026-11-05T10:53:32Z",
         "default_branch": "main",
         "stars": 37,
         "forks": 52,
@@ -2448,8 +2448,8 @@
         },
         "automation": {
           "present": true,
-          "conclusion": "failure",
-          "url": "https://github.com/UfukNode/technocore-did-tool/actions/runs/41810375154"
+          "conclusion": "success",
+          "url": "https://github.com/UfukNode/technocore-did-tool/actions/runs/42014247544"
         },
         "version": {
           "release": null,
@@ -2459,9 +2459,9 @@
         "warnings": []
       },
       "coverage": {
-        "percentage": 70,
+        "percentage": 80,
         "label": "strong",
-        "present": 7,
+        "present": 8,
         "observed": 10,
         "total": 10,
         "checks": [
@@ -2521,9 +2521,9 @@
             "label": "Latest automation passed",
             "description": "The latest completed GitHub Actions run succeeded.",
             "points": 10,
-            "state": "missing",
-            "passed": false,
-            "awarded": 0
+            "state": "present",
+            "passed": true,
+            "awarded": 10
           },
           {
             "id": "security",

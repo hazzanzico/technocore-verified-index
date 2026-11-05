@@ -1,6 +1,6 @@
 # Technocore Verified Index — detailed report
 
-Generated 2026-11-04T12:06:21.956Z using methodology 2.0.0.
+Generated 2026-11-05T12:18:03.192Z using methodology 2.0.0.
 These results describe observable evidence coverage, not project quality,
 security, protocol correctness, endorsement, or a ranking. See
 [METHODOLOGY.md](../METHODOLOGY.md) for exact boundaries.
@@ -307,7 +307,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 - License: Apache-2.0
 - Default branch: main
 - Last push: 2026-11-01T05:56:36Z
-- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/41783715673)
+- Latest completed automation: [success](https://github.com/noncesense67-spec/technocore-ts/actions/runs/41981709935)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -319,7 +319,7 @@ TypeScript SDK and MCP server with signed protocol handling, nonce management, a
 | [Recognized license](https://github.com/noncesense67-spec/technocore-ts/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/noncesense67-spec/technocore-ts/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/agent/autopilot.test.ts) | present | 10% |
-| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/41783715673) | present | 10% |
+| [Latest automation passed](https://github.com/noncesense67-spec/technocore-ts/actions/runs/41981709935) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/noncesense67-spec/technocore-ts/blob/main/src/protocol/protocol.test.ts) | present | 10% |
@@ -441,18 +441,18 @@ Python SDK with LangChain and LangGraph tools, local receipts, test vectors, and
 | [Technocore evidence path](https://github.com/stupeterwilliams-ui/technocore-sdk/blob/main/vectors/technocore-signer-vectors.json) | present | 10% |
 | [Recent activity](https://github.com/stupeterwilliams-ui/technocore-sdk/commits/main) | present | 10% |
 
-## [UfukNode/technocore-did-tool](https://github.com/UfukNode/technocore-did-tool) — Strong (70%)
+## [UfukNode/technocore-did-tool](https://github.com/UfukNode/technocore-did-tool) — Strong (80%)
 
 Browser interface for creating a local DID, preparing signed Technocore records, and organizing public contribution evidence.
 
 - Category: Applications
 - Platforms: node, web
-- Evidence present: 7/10
+- Evidence present: 8/10
 - Evidence evaluated: 10/10
 - License: MIT
 - Default branch: main
-- Last push: 2026-11-04T02:38:56Z
-- Latest completed automation: [failure](https://github.com/UfukNode/technocore-did-tool/actions/runs/41810375154)
+- Last push: 2026-11-05T10:53:32Z
+- Latest completed automation: [success](https://github.com/UfukNode/technocore-did-tool/actions/runs/42014247544)
 - Latest release: not observed
 - Latest tag: not observed
 - Observation warnings: none
@@ -464,7 +464,7 @@ Browser interface for creating a local DID, preparing signed Technocore records,
 | [Recognized license](https://github.com/UfukNode/technocore-did-tool/blob/main/LICENSE) | present | 10% |
 | [Root README](https://github.com/UfukNode/technocore-did-tool/blob/main/README.md) | present | 10% |
 | [Test evidence](https://github.com/UfukNode/technocore-did-tool/blob/main/test/technocore.test.js) | present | 10% |
-| [Latest automation passed](https://github.com/UfukNode/technocore-did-tool/actions/runs/41810375154) | missing | 0% |
+| [Latest automation passed](https://github.com/UfukNode/technocore-did-tool/actions/runs/42014247544) | present | 10% |
 | Security policy | missing | 0% |
 | Version marker | missing | 0% |
 | [Technocore evidence path](https://github.com/UfukNode/technocore-did-tool/blob/main/test/technocore.test.js) | present | 10% |
