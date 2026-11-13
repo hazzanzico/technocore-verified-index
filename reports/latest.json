@@ -1,7 +1,7 @@
 {
   "schema": "technocore-verified-index-report-v2",
   "methodology_version": "2.0.0",
-  "generated_at": "2026-11-12T12:41:21.577Z",
+  "generated_at": "2026-11-13T12:11:03.962Z",
   "project_count": 20,
   "projects": [
     {
@@ -1648,7 +1648,7 @@
         "automation": {
           "present": true,
           "conclusion": "success",
-          "url": "https://github.com/noncesense67-spec/technocore-ts/actions/runs/43172632402"
+          "url": "https://github.com/noncesense67-spec/technocore-ts/actions/runs/43379760786"
         },
         "version": {
           "release": null,
@@ -2429,7 +2429,7 @@
         "error": null,
         "archived": false,
         "license": "MIT",
-        "pushed_at": "2026-11-11T09:23:23Z",
+        "pushed_at": "2026-11-13T01:41:04Z",
         "default_branch": "main",
         "stars": 37,
         "forks": 52,
@@ -2449,7 +2449,7 @@
         "automation": {
           "present": true,
           "conclusion": "success",
-          "url": "https://github.com/UfukNode/technocore-did-tool/actions/runs/43153657990"
+          "url": "https://github.com/UfukNode/technocore-did-tool/actions/runs/43395739884"
         },
         "version": {
           "release": null,
